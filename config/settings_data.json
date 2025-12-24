@@ -2515,10 +2515,10 @@
           "col": "3",
           "col_md": "4",
           "col_mb": "6",
-          "spn_txt": "Shop now",
+          "spn_txt": "",
           "pr_txt": "",
           "loop": true,
-          "autoplay": false,
+          "autoplay": true,
           "au_time": 6,
           "au_hover": true,
           "button": true,
@@ -2537,10 +2537,117 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "image_text_overlay_KX9BUV": {
+        "type": "image_text_overlay",
+        "blocks": {
+          "1_rjEnU4": {
+            "type": "1",
+            "disabled": true,
+            "settings": {
+              "title": "Best shopify theme 2020",
+              "color": "#fff",
+              "fw_text": 600,
+              "fs_text": 30,
+              "lh_text": 0,
+              "ls_text": 0,
+              "fs_mb_text": 15,
+              "lh_mb_text": 0,
+              "ls_mb_text": 0
+            }
+          },
+          "6_RtHi6T": {
+            "type": "6",
+            "disabled": true,
+            "settings": {
+              "sp": 10,
+              "sp_mb": 10
+            }
+          },
+          "2_CyWbWF": {
+            "type": "2",
+            "settings": {
+              "font": "f__libre",
+              "title": "Crafted with care, worn with love, cherished for life.\n<br><br><br>\nCullen sets the standard in fine jewelery with a commitment to thoughtful, enduring craftsmanship. At every stage, our jewelers blend tradition and innovation to create pieces made to last – and made responsibly.",
+              "color": "#fff",
+              "fw_text": 400,
+              "fs_text": 14,
+              "lh_text": 0,
+              "ls_text": 0,
+              "fs_mb_text": 14,
+              "lh_mb_text": 0,
+              "ls_mb_text": 0,
+              "hide": false
+            }
+          },
+          "6_aMKFz4": {
+            "type": "6",
+            "disabled": true,
+            "settings": {
+              "sp": 10,
+              "sp_mb": 10
+            }
+          },
+          "3_Hq6JqU": {
+            "type": "3",
+            "disabled": true,
+            "settings": {
+              "title": "Shop Now",
+              "btn_link": "",
+              "open_link": "_blank",
+              "title2": "Shop Now 2",
+              "btn_link2": "",
+              "open_link2": "_blank",
+              "btn_round": true,
+              "btn_icon": false,
+              "cl_txt": "#fff",
+              "cl_bg": "#222",
+              "cl_bd": "#222",
+              "fs_text": 14,
+              "fw_text": 600,
+              "h": 40,
+              "ls_text": 0,
+              "fs_mb_text": 14,
+              "h_mb": 40,
+              "ls_mb_text": 0
+            }
+          }
+        },
+        "block_order": [
+          "1_rjEnU4",
+          "6_RtHi6T",
+          "2_CyWbWF",
+          "6_aMKFz4",
+          "3_Hq6JqU"
+        ],
+        "name": "9.1. Image with text overlay",
+        "settings": {
+          "se_height": "cus_h",
+          "use_custom_h": "1",
+          "h_des": "100px",
+          "h_tb": "500px",
+          "h_mb": "350px",
+          "use_pr": false,
+          "img_align": "center",
+          "caption_w": "2",
+          "cap_v_pos": 42,
+          "cap_h_pos": 50,
+          "txt_align": "tc",
+          "use_shadow": false,
+          "cl_overlay": "#000",
+          "cl_opacity": 0,
+          "layout": "nt_full",
+          "cl_bg": "#000000",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
-      "collection_list_yBEUBD"
+      "collection_list_yBEUBD",
+      "image_text_overlay_KX9BUV"
     ]
   }
 }
