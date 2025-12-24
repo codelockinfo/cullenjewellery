@@ -2438,110 +2438,6 @@
         ],
         "settings": {}
       },
-      "hero_video_kYzkjn": {
-        "type": "hero_video",
-        "blocks": {
-          "1_BNUjbd": {
-            "type": "1",
-            "settings": {
-              "title": "Experience Cullen in Person",
-              "color": "#ffffff",
-              "fw_text": 600,
-              "fs_text": 30,
-              "lh_text": 0,
-              "ls_text": 0,
-              "fs_mb_text": 15,
-              "lh_mb_text": 0,
-              "ls_mb_text": 0
-            }
-          },
-          "6_YkYTxz": {
-            "type": "6",
-            "settings": {
-              "sp": 10,
-              "sp_mb": 10
-            }
-          },
-          "2_YT4JW6": {
-            "type": "2",
-            "settings": {
-              "font": "f__libre",
-              "title": "View a range of our most popular engagement rings and wedding bands.",
-              "color": "#ffffff",
-              "fw_text": 400,
-              "fs_text": 14,
-              "lh_text": 0,
-              "ls_text": 0,
-              "fs_mb_text": 14,
-              "lh_mb_text": 0,
-              "ls_mb_text": 0,
-              "hide": false
-            }
-          },
-          "6_wBXger": {
-            "type": "6",
-            "settings": {
-              "sp": 10,
-              "sp_mb": 10
-            }
-          },
-          "3_xF3Ahi": {
-            "type": "3",
-            "settings": {
-              "title": "BOOK AN APPOINMENT",
-              "btn_link": "",
-              "open_link": "_blank",
-              "title2": "Shop Now 2",
-              "btn_link2": "",
-              "open_link2": "_blank",
-              "btn_round": true,
-              "btn_icon": false,
-              "cl_txt": "#ffffff",
-              "cl_bg": "#236339",
-              "cl_bd": "#222222",
-              "fs_text": 14,
-              "fw_text": 600,
-              "h": 40,
-              "ls_text": 0,
-              "fs_mb_text": 14,
-              "h_mb": 40,
-              "ls_mb_text": 0
-            }
-          }
-        },
-        "block_order": [
-          "1_BNUjbd",
-          "6_YkYTxz",
-          "2_YT4JW6",
-          "6_wBXger",
-          "3_xF3Ahi"
-        ],
-        "disabled": true,
-        "name": "1. Hero video",
-        "settings": {
-          "source": "1",
-          "video_url": "https://youtu.be/aBKLG26EHUc?si=9t36ESLKaSYINZhl",
-          "file_name": "",
-          "se_height": "full",
-          "use_custom_h": "1",
-          "h_des": "600px",
-          "h_tb": "500px",
-          "h_mb": "350px",
-          "caption_w": "2",
-          "cap_v_pos": 50,
-          "cap_h_pos": 50,
-          "txt_align": "tc",
-          "use_shadow": false,
-          "cl_overlay": "#000000",
-          "cl_opacity": 0,
-          "layout": "nt_full",
-          "cl_bg": "",
-          "mg": "50px,,50px,",
-          "pd": "",
-          "mg_mb": "",
-          "pd_mb": ""
-        }
-      },
       "header_2": {
         "type": "header_2",
         "blocks": {
@@ -2592,8 +2488,6 @@
         }
       }
     },
-    "content_for_index": [
-      "hero_video_kYzkjn"
-    ]
+    "content_for_index": []
   }
 }
