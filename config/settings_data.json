@@ -2643,11 +2643,214 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "banner_image_video_3h6iz9": {
+        "type": "banner-image-video",
+        "blocks": {
+          "image_URHQha": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Group_Bezel_4x5_copy_1000x1000_c2ed076e-0c57-48d3-a317-6c05f038083e.webp",
+              "img_align": "center",
+              "col_pr": "6",
+              "col_pr_tb": "6",
+              "col_pr_mb": "12",
+              "heading": "Heirloom in the Making",
+              "heading_color": "#fff",
+              "heading_size": 36,
+              "heading_size_mb": 24,
+              "heading_weight": 600,
+              "subheading": "A handcrafted piece whose story begins with you.",
+              "subheading_color": "#fff",
+              "subheading_size": 20,
+              "subheading_size_mb": 16,
+              "subheading_weight": 400,
+              "button_label": "EXPLORE BEZELS",
+              "button_url": "",
+              "button_target": "_self",
+              "button_bg_color": "#236339",
+              "button_text_color": "#fff",
+              "btn_round": true,
+              "btn_fs": 16,
+              "btn_fs_mb": 14,
+              "btn_weight": 600,
+              "btn_pd": 30,
+              "btn_pd_mb": 20,
+              "btn_h": 50,
+              "btn_h_mb": 44,
+              "txt_align": "tc",
+              "banner_align": "fl_center",
+              "cap_v_pos": 50,
+              "cap_h_pos": 50
+            }
+          },
+          "video_rVPMzB": {
+            "type": "video",
+            "settings": {
+              "source": "1",
+              "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+              "file_name": "",
+              "cdn_video_url": "",
+              "col_pr": "6",
+              "col_pr_tb": "6",
+              "col_pr_mb": "12",
+              "heading": "Heading Text",
+              "heading_color": "#fff",
+              "heading_size": 36,
+              "heading_size_mb": 24,
+              "heading_weight": 600,
+              "subheading": "Subheading Text",
+              "subheading_color": "#fff",
+              "subheading_size": 20,
+              "subheading_size_mb": 16,
+              "subheading_weight": 400,
+              "button_label": "Shop Now",
+              "button_url": "",
+              "button_target": "_self",
+              "button_bg_color": "#222",
+              "button_text_color": "#fff",
+              "btn_round": true,
+              "btn_fs": 16,
+              "btn_fs_mb": 14,
+              "btn_weight": 600,
+              "btn_pd": 30,
+              "btn_pd_mb": 20,
+              "btn_h": 50,
+              "btn_h_mb": 44,
+              "txt_align": "tc",
+              "banner_align": "fl_center",
+              "cap_v_pos": 50,
+              "cap_h_pos": 50
+            }
+          }
+        },
+        "block_order": [
+          "image_URHQha",
+          "video_rVPMzB"
+        ],
+        "name": "Banner with Video",
+        "settings": {
+          "title": "Banner with Video",
+          "sub_title": "",
+          "sub_font": "2",
+          "section_height": 30,
+          "cat_space": "30",
+          "cl_overlay": "#000",
+          "cl_opacity": 0,
+          "layout": "nt_full",
+          "cl_bg": "",
+          "mg": "",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
+      },
+      "collection_list_6akWFW": {
+        "type": "collection-list",
+        "blocks": {
+          "collection_GJJrLe": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Cullen_Website_4x5_2500px_04_400x400_3680b036-5812-40a2-9aa6-54fb6987e77d.webp",
+              "img_align": "center",
+              "title": "Louise →",
+              "url": ""
+            }
+          },
+          "collection_XkCyze": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Cullen_Website_4x5_2500px_05_400x400_645cbfa6-dcff-47dd-b7a1-0be28c34995e.webp",
+              "img_align": "center",
+              "title": "Emma →",
+              "url": ""
+            }
+          },
+          "collection_dRY3pM": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Cullen_Website_4x5_2500px_02_1_400x400_cc42d326-98ae-4f5b-a923-2a6f34563872.webp",
+              "img_align": "center",
+              "title": "Candice →",
+              "url": ""
+            }
+          },
+          "collection_wH6tLa": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Cullen_Website_4x5_2500px_03_2_400x400_c8a459cc-0963-474f-a239-a0b571367243.jpg",
+              "img_align": "center",
+              "title": "Francesca →",
+              "url": ""
+            }
+          },
+          "collection_A39iFQ": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Cullen_Website_4x5_2500px_01_400x400_1220c3bc-8906-4405-b98e-a577ec029f79.webp",
+              "img_align": "center",
+              "title": "Sheridan →",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection_GJJrLe",
+          "collection_XkCyze",
+          "collection_dRY3pM",
+          "collection_wH6tLa",
+          "collection_A39iFQ"
+        ],
+        "name": "5. Collection list",
+        "settings": {
+          "title": "Featured Engagement Rings",
+          "sub_title": "Shop from our range of lab diamond, colored sapphire and moissanite engagement rings.",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "cat_layout": "2",
+          "hoverz": true,
+          "cat_design": "5",
+          "cat_space": "30",
+          "image_ratio": "ratio_nt",
+          "col": "3",
+          "col_md": "4",
+          "col_mb": "6",
+          "spn_txt": "",
+          "pr_txt": "",
+          "loop": true,
+          "autoplay": true,
+          "au_time": 6,
+          "au_hover": true,
+          "button": false,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "0",
+          "dot": true,
+          "dot_owl": "1",
+          "dot_color": "1",
+          "hidden": false,
+          "cp_code": false,
+          "layout": "wrap",
+          "cl_bg": "",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
+      "banner_image_video_3h6iz9",
       "collection_list_yBEUBD",
-      "image_text_overlay_KX9BUV"
+      "image_text_overlay_KX9BUV",
+      "collection_list_6akWFW"
     ]
   }
 }
