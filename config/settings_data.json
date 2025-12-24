@@ -2491,9 +2491,9 @@
         ],
         "settings": {
           "height": 62,
-          "arrow": false,
+          "arrow": true,
           "source": "1",
-          "txt": "Welcome to our store!",
+          "txt": "",
           "social": "2",
           "align": "tc",
           "hover": "hover_side_up"
