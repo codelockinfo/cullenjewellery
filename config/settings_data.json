@@ -2480,13 +2480,24 @@
               "title": "Halo →",
               "url": ""
             }
+          },
+          "collection_wtNiyJ": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/shop_by_style_-_toi_et_moi_400x400_c57e80f2-fca2-453f-8176-92d9b5e68637.jpg",
+              "img_align": "center",
+              "title": "Toi Et Moi →",
+              "url": ""
+            }
           }
         },
         "block_order": [
           "collection_ydhDhe",
           "collection_whWHEp",
           "collection_7rH3zW",
-          "collection_pd4TFQ"
+          "collection_pd4TFQ",
+          "collection_wtNiyJ"
         ],
         "name": "5. Collection list",
         "settings": {
