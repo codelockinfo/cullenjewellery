@@ -77,7 +77,7 @@
     "full_header": true,
     "sticky_header": true,
     "scroll_header": false,
-    "header_design": "3",
+    "header_design": "2",
     "h_transparent": false,
     "h_tr_top": false,
     "h_navmb": 60,
@@ -2445,7 +2445,7 @@
             "type": "1",
             "settings": {
               "title": "Experience Cullen in Person",
-              "color": "#fff",
+              "color": "#ffffff",
               "fw_text": 600,
               "fs_text": 30,
               "lh_text": 0,
@@ -2467,7 +2467,7 @@
             "settings": {
               "font": "f__libre",
               "title": "View a range of our most popular engagement rings and wedding bands.",
-              "color": "#fff",
+              "color": "#ffffff",
               "fw_text": 400,
               "fs_text": 14,
               "lh_text": 0,
@@ -2496,9 +2496,9 @@
               "open_link2": "_blank",
               "btn_round": true,
               "btn_icon": false,
-              "cl_txt": "#fff",
+              "cl_txt": "#ffffff",
               "cl_bg": "#236339",
-              "cl_bd": "#222",
+              "cl_bd": "#222222",
               "fs_text": 14,
               "fw_text": 600,
               "h": 40,
@@ -2531,7 +2531,7 @@
           "cap_h_pos": 50,
           "txt_align": "tc",
           "use_shadow": false,
-          "cl_overlay": "#000",
+          "cl_overlay": "#000000",
           "cl_opacity": 0,
           "layout": "nt_full",
           "cl_bg": "",
@@ -2539,6 +2539,55 @@
           "pd": "",
           "mg_mb": "",
           "pd_mb": ""
+        }
+      },
+      "header_2": {
+        "type": "header_2",
+        "blocks": {
+          "header_2-0": {
+            "type": "simple",
+            "settings": {
+              "title": "Heading 1",
+              "url": "#",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "header_2-1": {
+            "type": "logo",
+            "settings": {}
+          },
+          "header_2-2": {
+            "type": "simple",
+            "settings": {
+              "title": "Heading 2",
+              "url": "#",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          }
+        },
+        "block_order": [
+          "header_2-0",
+          "header_2-1",
+          "header_2-2"
+        ],
+        "settings": {
+          "height": 62,
+          "arrow": false,
+          "source": "1",
+          "txt": "Welcome to our store!",
+          "social": "2",
+          "align": "tc",
+          "hover": "hover_side_up"
         }
       }
     },
