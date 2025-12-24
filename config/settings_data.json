@@ -61,9 +61,9 @@
     "enable_tag": true,
     "filter_price_list": "$7-$50, $50-$150, $150-$500",
     "logo_svg": "",
-    "logo": "shopify://shop_images/Cullen-Jewellery.png",
-    "logo_retina": "shopify://shop_images/Cullen-Jewellery.png",
-    "logo_width": 185,
+    "logo": "shopify://shop_images/logo_1.png",
+    "logo_retina": "shopify://shop_images/logo_1.png",
+    "logo_width": 135,
     "logos_width": 180,
     "logo_mb": "",
     "logo_mb_retina": "",
@@ -77,7 +77,7 @@
     "full_header": true,
     "sticky_header": true,
     "scroll_header": false,
-    "header_design": "2",
+    "header_design": "3",
     "h_transparent": false,
     "h_tr_top": false,
     "h_navmb": 60,
@@ -427,14 +427,6 @@
       "header_top": {
         "type": "header_top",
         "blocks": {
-          "text_4r9W8K": {
-            "type": "text",
-            "settings": {
-              "text": "Summer sale discount off <span class=\"cr\">50%</span>! <a href=\"/shop\">Shop Now</a>",
-              "hide": false,
-              "col": "4"
-            }
-          },
           "text2_Ck9mF9": {
             "type": "text2",
             "settings": {
@@ -442,6 +434,16 @@
               "effect": "1",
               "au_time": 3.5,
               "hide": false,
+              "col": "4"
+            }
+          },
+          "1595994733101": {
+            "type": "social",
+            "settings": {
+              "social": "2",
+              "border_bl": true,
+              "black_bl": false,
+              "hide": true,
               "col": "4"
             }
           },
@@ -454,8 +456,8 @@
           }
         },
         "block_order": [
-          "text_4r9W8K",
           "text2_Ck9mF9",
+          "1595994733101",
           "header_top-2"
         ],
         "settings": {
@@ -2436,136 +2438,109 @@
         ],
         "settings": {}
       },
-      "header_2": {
-        "type": "header_2",
+      "collection_list_yBEUBD": {
+        "type": "collection-list",
         "blocks": {
-          "dropdown_TfX778": {
-            "type": "dropdown",
+          "collection_ydhDhe": {
+            "type": "collection",
             "settings": {
-              "title": "Ready-To-Ship",
-              "url": "",
-              "open_link": "_self",
-              "menu": "",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": "",
-              "lazy_mn": true,
-              "pos": "right"
+              "collection": "",
+              "image": "shopify://shop_images/2023_11_14_Cullen_Website_1x1_02_400x400_517ae05d-c369-4806-a378-d3568c5c0c97.webp",
+              "img_align": "center",
+              "title": "Bezel →",
+              "url": ""
             }
           },
-          "simple_CxNGRh": {
-            "type": "simple",
+          "collection_whWHEp": {
+            "type": "collection",
             "settings": {
-              "title": "Engagement",
-              "url": "#",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": ""
+              "collection": "",
+              "image": "shopify://shop_images/2023_11_14_Cullen_Website_4x5_07_700x700_f8f68f25-2b16-4336-a396-26932cf0122d.webp",
+              "img_align": "center",
+              "title": "Solitaire →",
+              "url": ""
             }
           },
-          "simple_LHJne4": {
-            "type": "simple",
+          "collection_7rH3zW": {
+            "type": "collection",
             "settings": {
-              "title": "Wedding",
-              "url": "#",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": ""
+              "collection": "",
+              "image": "shopify://shop_images/shop_by_stype_-_trilogy_500x500_169c51c7-76ff-4f11-981a-ccfdf68c1a72.jpg",
+              "img_align": "center",
+              "title": "Trilogy →",
+              "url": ""
             }
           },
-          "simple_pdBrDx": {
-            "type": "simple",
+          "collection_pd4TFQ": {
+            "type": "collection",
             "settings": {
-              "title": "Fine Jewelry",
-              "url": "#",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": ""
+              "collection": "",
+              "image": "shopify://shop_images/2023_11_14_Cullen_Website_1x1_02_400x400_517ae05d-c369-4806-a378-d3568c5c0c97.webp",
+              "img_align": "center",
+              "title": "Halo →",
+              "url": ""
             }
           },
-          "header_2-1": {
-            "type": "logo",
-            "settings": {}
-          },
-          "dropdown_3x4Yy4": {
-            "type": "dropdown",
+          "collection_wtNiyJ": {
+            "type": "collection",
             "settings": {
-              "title": "Education",
-              "url": "",
-              "open_link": "_self",
-              "menu": "",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": "",
-              "lazy_mn": true,
-              "pos": "right"
-            }
-          },
-          "mega_bmUfRH": {
-            "type": "mega",
-            "settings": {
-              "title": "Contact",
-              "url": "",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": "",
-              "lazy_mn": true,
-              "pos": "default",
-              "wid": "cus",
-              "cus_wid": 1200
-            }
-          },
-          "header_2-2": {
-            "type": "simple",
-            "settings": {
-              "title": "Visit",
-              "url": "#",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": ""
+              "collection": "",
+              "image": "shopify://shop_images/shop_by_style_-_toi_et_moi_400x400_c57e80f2-fca2-453f-8176-92d9b5e68637.jpg",
+              "img_align": "center",
+              "title": "Toi Et Moi →",
+              "url": ""
             }
           }
         },
         "block_order": [
-          "dropdown_TfX778",
-          "simple_CxNGRh",
-          "simple_LHJne4",
-          "simple_pdBrDx",
-          "header_2-1",
-          "dropdown_3x4Yy4",
-          "mega_bmUfRH",
-          "header_2-2"
+          "collection_ydhDhe",
+          "collection_whWHEp",
+          "collection_7rH3zW",
+          "collection_pd4TFQ",
+          "collection_wtNiyJ"
         ],
+        "name": "5. Collection list",
         "settings": {
-          "height": 67,
-          "arrow": true,
-          "source": "0",
-          "txt": "",
-          "social": "2",
-          "align": "tc",
-          "hover": "hover_side_up"
+          "title": "Shop Lab Diamond Engagement Rings by Style",
+          "sub_title": "Shop Lab Diamond Engagement Rings by Style",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "cat_layout": "2",
+          "hoverz": true,
+          "cat_design": "5",
+          "cat_space": "30",
+          "image_ratio": "ratio_nt",
+          "col": "3",
+          "col_md": "4",
+          "col_mb": "6",
+          "spn_txt": "Shop now",
+          "pr_txt": "",
+          "loop": true,
+          "autoplay": false,
+          "au_time": 6,
+          "au_hover": true,
+          "button": true,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "0",
+          "dot": true,
+          "dot_owl": "1",
+          "dot_color": "1",
+          "hidden": false,
+          "cp_code": false,
+          "layout": "wrap",
+          "cl_bg": "",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+      "collection_list_yBEUBD"
+    ]
   }
 }
