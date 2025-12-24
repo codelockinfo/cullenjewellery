@@ -2444,7 +2444,7 @@
           "header_2-0": {
             "type": "simple",
             "settings": {
-              "title": "Heading 1",
+              "title": "Ready-To-Ship",
               "url": "#",
               "open_link": "_self",
               "icon": "",
@@ -2452,6 +2452,17 @@
               "cl": "#ec0101",
               "lb": "",
               "lb_cl": ""
+            }
+          },
+          "cat_97DU7E": {
+            "type": "cat",
+            "settings": {
+              "image": "shopify://shop_images/Holiday_Campaign_P2_7.webp",
+              "cat_design": "1",
+              "hoverz": true,
+              "collection": "earbuds",
+              "title": "Engagement Rings",
+              "col": "4"
             }
           },
           "header_2-1": {
@@ -2474,6 +2485,7 @@
         },
         "block_order": [
           "header_2-0",
+          "cat_97DU7E",
           "header_2-1",
           "header_2-2"
         ],
