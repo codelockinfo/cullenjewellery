@@ -2500,6 +2500,39 @@
             "type": "logo",
             "settings": {}
           },
+          "dropdown_3x4Yy4": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Education",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "mega_bmUfRH": {
+            "type": "mega",
+            "settings": {
+              "title": "Heading",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "default",
+              "wid": "cus",
+              "cus_wid": 1200
+            }
+          },
           "header_2-2": {
             "type": "simple",
             "settings": {
@@ -2520,6 +2553,8 @@
           "simple_LHJne4",
           "simple_pdBrDx",
           "header_2-1",
+          "dropdown_3x4Yy4",
+          "mega_bmUfRH",
           "header_2-2"
         ],
         "settings": {
