@@ -2519,7 +2519,7 @@
           "mega_bmUfRH": {
             "type": "mega",
             "settings": {
-              "title": "Heading",
+              "title": "Contact",
               "url": "",
               "open_link": "_self",
               "icon": "",
@@ -2536,7 +2536,7 @@
           "header_2-2": {
             "type": "simple",
             "settings": {
-              "title": "Heading 2",
+              "title": "Visit",
               "url": "#",
               "open_link": "_self",
               "icon": "",
