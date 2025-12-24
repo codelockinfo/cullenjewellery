@@ -2445,8 +2445,9 @@
             "type": "collection",
             "settings": {
               "collection": "",
+              "image": "shopify://shop_images/2023_11_14_Cullen_Website_1x1_02_400x400_517ae05d-c369-4806-a378-d3568c5c0c97.webp",
               "img_align": "center",
-              "title": "",
+              "title": "Bezel →",
               "url": ""
             }
           },
@@ -2454,17 +2455,9 @@
             "type": "collection",
             "settings": {
               "collection": "",
+              "image": "shopify://shop_images/2023_11_14_Cullen_Website_4x5_07_700x700_f8f68f25-2b16-4336-a396-26932cf0122d.webp",
               "img_align": "center",
-              "title": "",
-              "url": ""
-            }
-          },
-          "collection_pd4TFQ": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "img_align": "center",
-              "title": "",
+              "title": "Solitaire →",
               "url": ""
             }
           },
@@ -2472,8 +2465,19 @@
             "type": "collection",
             "settings": {
               "collection": "",
+              "image": "shopify://shop_images/shop_by_stype_-_trilogy_500x500_169c51c7-76ff-4f11-981a-ccfdf68c1a72.jpg",
               "img_align": "center",
-              "title": "",
+              "title": "Trilogy →",
+              "url": ""
+            }
+          },
+          "collection_pd4TFQ": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/2023_11_14_Cullen_Website_1x1_02_400x400_517ae05d-c369-4806-a378-d3568c5c0c97.webp",
+              "img_align": "center",
+              "title": "Halo →",
               "url": ""
             }
           }
@@ -2481,13 +2485,13 @@
         "block_order": [
           "collection_ydhDhe",
           "collection_whWHEp",
-          "collection_pd4TFQ",
-          "collection_7rH3zW"
+          "collection_7rH3zW",
+          "collection_pd4TFQ"
         ],
         "name": "5. Collection list",
         "settings": {
-          "title": "Collection list",
-          "sub_title": "Sub Text",
+          "title": "Shop Lab Diamond Engagement Rings by Style",
+          "sub_title": "Shop Lab Diamond Engagement Rings by Style",
           "sub_font": "2",
           "style_title": "title_1",
           "ic_tt": "gem",
