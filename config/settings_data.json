@@ -2844,10 +2844,116 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "hero_video_hVYrrz": {
+        "type": "hero_video",
+        "blocks": {
+          "1_YrY8EE": {
+            "type": "1",
+            "settings": {
+              "title": "Best shopify theme 2020",
+              "color": "#fff",
+              "fw_text": 600,
+              "fs_text": 30,
+              "lh_text": 0,
+              "ls_text": 0,
+              "fs_mb_text": 15,
+              "lh_mb_text": 0,
+              "ls_mb_text": 0
+            }
+          },
+          "6_VwEFRh": {
+            "type": "6",
+            "settings": {
+              "sp": 10,
+              "sp_mb": 10
+            }
+          },
+          "2_JEtR48": {
+            "type": "2",
+            "settings": {
+              "font": "f__libre",
+              "title": "Kalles v1",
+              "color": "#fff",
+              "fw_text": 400,
+              "fs_text": 14,
+              "lh_text": 0,
+              "ls_text": 0,
+              "fs_mb_text": 14,
+              "lh_mb_text": 0,
+              "ls_mb_text": 0,
+              "hide": false
+            }
+          },
+          "6_DpP9iU": {
+            "type": "6",
+            "settings": {
+              "sp": 10,
+              "sp_mb": 10
+            }
+          },
+          "3_fXkFdz": {
+            "type": "3",
+            "settings": {
+              "title": "Shop Now",
+              "btn_link": "",
+              "open_link": "_blank",
+              "title2": "Shop Now 2",
+              "btn_link2": "",
+              "open_link2": "_blank",
+              "btn_round": true,
+              "btn_icon": false,
+              "cl_txt": "#fff",
+              "cl_bg": "#222",
+              "cl_bd": "#222",
+              "fs_text": 14,
+              "fw_text": 600,
+              "h": 40,
+              "ls_text": 0,
+              "fs_mb_text": 14,
+              "h_mb": 40,
+              "ls_mb_text": 0
+            }
+          }
+        },
+        "block_order": [
+          "1_YrY8EE",
+          "6_VwEFRh",
+          "2_JEtR48",
+          "6_DpP9iU",
+          "3_fXkFdz"
+        ],
+        "name": "1. Hero video",
+        "settings": {
+          "source": "3",
+          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "file_name": "",
+          "cdn_video_url": "https://cdn.shopify.com/videos/c/o/v/211d2b66266642e18f88f6f87d40d5bf.mp4",
+          "se_height": "full",
+          "use_custom_h": "1",
+          "h_des": "600px",
+          "h_tb": "500px",
+          "h_mb": "350px",
+          "caption_w": "2",
+          "content_position": "custom",
+          "cap_v_pos": 50,
+          "cap_h_pos": 50,
+          "txt_align": "tc",
+          "use_shadow": false,
+          "cl_overlay": "#000",
+          "cl_opacity": 0,
+          "layout": "nt_full",
+          "cl_bg": "",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
       "banner_image_video_3h6iz9",
+      "hero_video_hVYrrz",
       "collection_list_yBEUBD",
       "image_text_overlay_KX9BUV",
       "collection_list_6akWFW"
