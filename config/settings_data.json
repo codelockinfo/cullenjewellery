@@ -2568,7 +2568,7 @@
             "type": "2",
             "settings": {
               "font": "f__libre",
-              "title": "Crafted with care, worn with love, cherished for life.\n<br><br><br>\nCullen sets the standard in fine jewelery with a commitment to thoughtful, enduring craftsmanship. At every stage, our jewelers blend tradition and innovation to create pieces made to last – and made responsibly.",
+              "title": "Crafted with care, worn with love, cherished for life.\n<br><br><br>\nCullen sets the standard in fine jewelery with a commitment to thoughtful, enduring craftsmanship. At every stage,<br> our jewelers blend tradition and innovation to create pieces made to last – and made responsibly.",
               "color": "#ffffff",
               "fw_text": 400,
               "fs_text": 14,
