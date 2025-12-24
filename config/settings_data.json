@@ -2644,107 +2644,6 @@
           "pd_mb": ""
         }
       },
-      "banner_image_video_3h6iz9": {
-        "type": "banner-image-video",
-        "blocks": {
-          "image_URHQha": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/Group_Bezel_4x5_copy_1000x1000_c2ed076e-0c57-48d3-a317-6c05f038083e.webp",
-              "img_align": "center",
-              "col_pr": "6",
-              "col_pr_tb": "6",
-              "col_pr_mb": "12",
-              "heading": "Heirloom in the Making",
-              "heading_color": "#fff",
-              "heading_size": 36,
-              "heading_size_mb": 24,
-              "heading_weight": 600,
-              "subheading": "A handcrafted piece whose story begins with you.",
-              "subheading_color": "#fff",
-              "subheading_size": 20,
-              "subheading_size_mb": 16,
-              "subheading_weight": 400,
-              "button_label": "EXPLORE BEZELS",
-              "button_url": "",
-              "button_target": "_self",
-              "button_bg_color": "#236339",
-              "button_text_color": "#fff",
-              "btn_round": true,
-              "btn_fs": 16,
-              "btn_fs_mb": 14,
-              "btn_weight": 600,
-              "btn_pd": 30,
-              "btn_pd_mb": 20,
-              "btn_h": 50,
-              "btn_h_mb": 44,
-              "txt_align": "tc",
-              "banner_align": "fl_center",
-              "cap_v_pos": 50,
-              "cap_h_pos": 50
-            }
-          },
-          "video_rVPMzB": {
-            "type": "video",
-            "settings": {
-              "source": "3",
-              "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-              "file_name": "",
-              "cdn_video_url": "https://cdn.shopify.com/videos/c/o/v/1d68a1428cbf478d9274f68ad2706d67.mp4",
-              "col_pr": "6",
-              "col_pr_tb": "6",
-              "col_pr_mb": "12",
-              "heading": "Heading Text",
-              "heading_color": "#fff",
-              "heading_size": 36,
-              "heading_size_mb": 24,
-              "heading_weight": 600,
-              "subheading": "Subheading Text",
-              "subheading_color": "#fff",
-              "subheading_size": 20,
-              "subheading_size_mb": 16,
-              "subheading_weight": 400,
-              "button_label": "Shop Now",
-              "button_url": "",
-              "button_target": "_self",
-              "button_bg_color": "#222",
-              "button_text_color": "#fff",
-              "btn_round": true,
-              "btn_fs": 16,
-              "btn_fs_mb": 14,
-              "btn_weight": 600,
-              "btn_pd": 30,
-              "btn_pd_mb": 20,
-              "btn_h": 50,
-              "btn_h_mb": 44,
-              "txt_align": "tc",
-              "banner_align": "fl_center",
-              "cap_v_pos": 50,
-              "cap_h_pos": 50
-            }
-          }
-        },
-        "block_order": [
-          "image_URHQha",
-          "video_rVPMzB"
-        ],
-        "name": "Banner with Video",
-        "settings": {
-          "title": "Banner with Video",
-          "sub_title": "",
-          "sub_font": "2",
-          "section_height": 30,
-          "cat_space": "30",
-          "cl_overlay": "#000",
-          "cl_opacity": 0,
-          "layout": "nt_full",
-          "cl_bg": "",
-          "mg": "",
-          "pd": "",
-          "mg_mb": "",
-          "pd_mb": ""
-        }
-      },
       "collection_list_6akWFW": {
         "type": "collection-list",
         "blocks": {
@@ -2845,104 +2744,24 @@
           "pd_mb": ""
         }
       },
-      "hero_video_hVYrrz": {
-        "type": "hero_video",
-        "blocks": {
-          "1_YrY8EE": {
-            "type": "1",
-            "settings": {
-              "title": "Best shopify theme 2020",
-              "color": "#fff",
-              "fw_text": 600,
-              "fs_text": 30,
-              "lh_text": 0,
-              "ls_text": 0,
-              "fs_mb_text": 15,
-              "lh_mb_text": 0,
-              "ls_mb_text": 0
-            }
-          },
-          "6_VwEFRh": {
-            "type": "6",
-            "settings": {
-              "sp": 10,
-              "sp_mb": 10
-            }
-          },
-          "2_JEtR48": {
-            "type": "2",
-            "settings": {
-              "font": "f__libre",
-              "title": "Kalles v1",
-              "color": "#fff",
-              "fw_text": 400,
-              "fs_text": 14,
-              "lh_text": 0,
-              "ls_text": 0,
-              "fs_mb_text": 14,
-              "lh_mb_text": 0,
-              "ls_mb_text": 0,
-              "hide": false
-            }
-          },
-          "6_DpP9iU": {
-            "type": "6",
-            "settings": {
-              "sp": 10,
-              "sp_mb": 10
-            }
-          },
-          "3_fXkFdz": {
-            "type": "3",
-            "settings": {
-              "title": "Shop Now",
-              "btn_link": "",
-              "open_link": "_blank",
-              "title2": "Shop Now 2",
-              "btn_link2": "",
-              "open_link2": "_blank",
-              "btn_round": true,
-              "btn_icon": false,
-              "cl_txt": "#fff",
-              "cl_bg": "#222",
-              "cl_bd": "#222",
-              "fs_text": 14,
-              "fw_text": 600,
-              "h": 40,
-              "ls_text": 0,
-              "fs_mb_text": 14,
-              "h_mb": 40,
-              "ls_mb_text": 0
-            }
-          }
-        },
-        "block_order": [
-          "1_YrY8EE",
-          "6_VwEFRh",
-          "2_JEtR48",
-          "6_DpP9iU",
-          "3_fXkFdz"
-        ],
-        "name": "1. Hero video",
+      "image_text_j3jVmi": {
+        "type": "image_text",
+        "name": "7. Image with text",
         "settings": {
-          "source": "3",
-          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-          "file_name": "",
-          "cdn_video_url": "https://cdn.shopify.com/videos/c/o/v/211d2b66266642e18f88f6f87d40d5bf.mp4",
-          "se_height": "full",
-          "use_custom_h": "1",
-          "h_des": "600px",
-          "h_tb": "500px",
-          "h_mb": "350px",
-          "caption_w": "2",
-          "content_position": "custom",
-          "cap_v_pos": 50,
-          "cap_h_pos": 50,
+          "image": "shopify://shop_images/Ring_Collections_-_Ready_to_Ship_1000x1000_0de54e7a-3e80-428f-83af-bf91c9c7e9bf.webp",
+          "img_align": "center",
+          "img_position": "1",
+          "image_ratio": "auto",
+          "text_size": "60,18",
+          "title": "Ring Collections",
+          "text": "<p><a href=\"https://cullenjewellery.com/engagement-rings/ready-to-ship\">Ready-To-Ship</a><br/><a href=\"https://cullenjewellery.com/fine-jewellery/statement-rings\">Statement</a><br/><a href=\"https://cullenjewellery.com/fine-jewellery/minimal-rings\">Minimal</a><br/><a href=\"https://cullenjewellery.com/fine-jewellery/stacker-rings\">Stacker</a><br/><a href=\"https://cullenjewellery.com/engagement-rings/bezel\">Bezel</a><br/><a href=\"https://cullenjewellery.com/engagement-rings/east-west\">East-West</a></p>",
+          "button_label": "Shop Now",
+          "button_link": "",
+          "open_link": "_blank",
           "txt_align": "tc",
           "use_shadow": false,
-          "cl_overlay": "#000",
-          "cl_opacity": 0,
-          "layout": "nt_full",
+          "cl_txt": "dark",
+          "layout": "container",
           "cl_bg": "",
           "mg": "50px,,50px,",
           "pd": "",
@@ -2952,11 +2771,10 @@
       }
     },
     "content_for_index": [
-      "banner_image_video_3h6iz9",
-      "hero_video_hVYrrz",
       "collection_list_yBEUBD",
       "image_text_overlay_KX9BUV",
-      "collection_list_6akWFW"
+      "collection_list_6akWFW",
+      "image_text_j3jVmi"
     ]
   }
 }
