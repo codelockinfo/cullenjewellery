@@ -2441,21 +2441,20 @@
       "header_2": {
         "type": "header_2",
         "blocks": {
-          "mega_gYMqA6": {
-            "type": "mega",
+          "dropdown_TfX778": {
+            "type": "dropdown",
             "settings": {
               "title": "Ready-To-Ship",
               "url": "",
               "open_link": "_self",
+              "menu": "",
               "icon": "",
               "cus_cl": false,
               "cl": "#ec0101",
               "lb": "",
               "lb_cl": "",
               "lazy_mn": true,
-              "pos": "default",
-              "wid": "cus",
-              "cus_wid": 1200
+              "pos": "right"
             }
           },
           "simple_CxNGRh": {
@@ -2497,17 +2496,6 @@
               "lb_cl": ""
             }
           },
-          "cat_97DU7E": {
-            "type": "cat",
-            "settings": {
-              "image": "shopify://shop_images/Holiday_Campaign_P2_7.webp",
-              "cat_design": "1",
-              "hoverz": true,
-              "collection": "earbuds",
-              "title": "Engagement Rings",
-              "col": "4"
-            }
-          },
           "header_2-1": {
             "type": "logo",
             "settings": {}
@@ -2527,11 +2515,10 @@
           }
         },
         "block_order": [
-          "mega_gYMqA6",
+          "dropdown_TfX778",
           "simple_CxNGRh",
           "simple_LHJne4",
           "simple_pdBrDx",
-          "cat_97DU7E",
           "header_2-1",
           "header_2-2"
         ],
