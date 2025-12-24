@@ -2441,17 +2441,21 @@
       "header_2": {
         "type": "header_2",
         "blocks": {
-          "header_2-0": {
-            "type": "simple",
+          "mega_gYMqA6": {
+            "type": "mega",
             "settings": {
               "title": "Ready-To-Ship",
-              "url": "#",
+              "url": "",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
               "cl": "#ec0101",
               "lb": "",
-              "lb_cl": ""
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "default",
+              "wid": "cus",
+              "cus_wid": 1200
             }
           },
           "simple_CxNGRh": {
@@ -2523,7 +2527,7 @@
           }
         },
         "block_order": [
-          "header_2-0",
+          "mega_gYMqA6",
           "simple_CxNGRh",
           "simple_LHJne4",
           "simple_pdBrDx",
