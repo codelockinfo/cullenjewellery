@@ -427,6 +427,14 @@
       "header_top": {
         "type": "header_top",
         "blocks": {
+          "text_4r9W8K": {
+            "type": "text",
+            "settings": {
+              "text": "Summer sale discount off <span class=\"cr\">50%</span>! <a href=\"/shop\">Shop Now</a>",
+              "hide": false,
+              "col": "4"
+            }
+          },
           "text2_Ck9mF9": {
             "type": "text2",
             "settings": {
@@ -434,16 +442,6 @@
               "effect": "1",
               "au_time": 3.5,
               "hide": false,
-              "col": "4"
-            }
-          },
-          "1595994733101": {
-            "type": "social",
-            "settings": {
-              "social": "2",
-              "border_bl": true,
-              "black_bl": false,
-              "hide": true,
               "col": "4"
             }
           },
@@ -456,8 +454,8 @@
           }
         },
         "block_order": [
+          "text_4r9W8K",
           "text2_Ck9mF9",
-          "1595994733101",
           "header_top-2"
         ],
         "settings": {

@@ -4,7 +4,41 @@
   assign se_height = se_stts.se_height
   assign video_url = se_stts.video_url | default:"https://www.youtube.com/watch?v=_9VUPq3SxOc" 
   assign source = se_stts.source
-  assign image = se_stts.image -%}
+  assign image = se_stts.image
+  if se_stts.content_position != blank and se_stts.content_position != 'custom'
+    case se_stts.content_position
+      when 'top-left'
+        assign cap_h_pos = 0
+        assign cap_v_pos = 0
+      when 'top-center'
+        assign cap_h_pos = 50
+        assign cap_v_pos = 0
+      when 'top-right'
+        assign cap_h_pos = 100
+        assign cap_v_pos = 0
+      when 'middle-left'
+        assign cap_h_pos = 0
+        assign cap_v_pos = 50
+      when 'middle-center'
+        assign cap_h_pos = 50
+        assign cap_v_pos = 50
+      when 'middle-right'
+        assign cap_h_pos = 100
+        assign cap_v_pos = 50
+      when 'bottom-left'
+        assign cap_h_pos = 0
+        assign cap_v_pos = 100
+      when 'bottom-center'
+        assign cap_h_pos = 50
+        assign cap_v_pos = 100
+      when 'bottom-right'
+        assign cap_h_pos = 100
+        assign cap_v_pos = 100
+    endcase
+  else
+    assign cap_h_pos = se_stts.cap_h_pos
+    assign cap_v_pos = se_stts.cap_v_pos
+  endif -%}
 
 <div class="hero_video_se nt_se_{{sid}} {{se_stts.layout}} txt_shadow_{{se_stts.use_shadow}} se_height_{{se_height}} nt_first{% if source == '1' %} video_loading js_video{% endif %}" data-id="{{ video_url.id }}">
   <div class="row">
@@ -13,18 +47,34 @@
         <div class="nt_bg_lz">
           {%- if source == '1' %}<div class="videoplayer"></div>
           {%- else -%}
-             <video id="video_{{sid}}" class="vid_nt vid_nt_js pa t__0 l__0 op__0 vid_bg lazypreload" preload="none" playsinline data-autoplay muted loop>
-                <source src="{% if se_stts.file_name != blank %}{{ se_stts.file_name | file_url }}{% else %}https://cdn.shopify.com/s/files/1/0259/8538/4520/files/video_ex.mp4?14086{% endif %}" type="video/mp4">
-             </video>
-              <div class="pa t__0 l__0 b__0 r__0 flex column tc fl_center pe_none btn_video_ef">
-                <button type="button" class="flex fl_center al_center video-control__play"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="0 0 20 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.6 16.8L7 1.5C5.6.3 4 .2 2.9.7 1.6 1.4.8 2.7.7 3.8v31.7c0 1.8 1.1 3.3 3.1 3.3 1.5 0 2.5-.5 3.4-1.4l16.4-15.7c1.5-1.4 1.5-3.6 0-4.9z"></path></svg></button>
-              </div>
+             {%- liquid
+               assign video_src = ''
+               if source == '2'
+                 if se_stts.file_name != blank
+                   assign video_src = se_stts.file_name | file_url
+                 else
+                   assign video_src = 'https://cdn.shopify.com/s/files/1/0259/8538/4520/files/video_ex.mp4?14086'
+                 endif
+               elsif source == '3'
+                 if se_stts.cdn_video_url != blank
+                   assign video_src = se_stts.cdn_video_url
+                 endif
+               endif
+             -%}
+             {%- if video_src != blank -%}
+               <video id="video_{{sid}}" class="vid_nt vid_nt_js pa t__0 l__0 op__0 vid_bg lazypreload" preload="none" playsinline data-autoplay muted loop>
+                 <source src="{{ video_src }}" type="video/mp4">
+               </video>
+               <div class="pa t__0 l__0 b__0 r__0 flex column tc fl_center pe_none btn_video_ef">
+                 <button type="button" class="flex fl_center al_center video-control__play"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-play" viewBox="0 0 20 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.6 16.8L7 1.5C5.6.3 4 .2 2.9.7 1.6 1.4.8 2.7.7 3.8v31.7c0 1.8 1.1 3.3 3.1 3.3 1.5 0 2.5-.5 3.4-1.4l16.4-15.7c1.5-1.4 1.5-3.6 0-4.9z"></path></svg></button>
+               </div>
+             {%- endif -%}
           {%- endif -%}
           {%- if image != blank -%}
           <div class="pa l__0 t__0 r__0 b__0 bg_rp_norepeat bg_sz_cover img_vid_js pe_none" data-bgset="{{ image | img_url: '1x1' }}" data-ratio="{{image.aspect_ratio}}" data-sizes="auto" style="background-image: url({{ image | img_url: '1x1' }})"></div>
           {%- endif -%}
         </div><div class="txt_content pa t__0 l__0 b__0 r__0 caption-w-{{se_stts.caption_w}} flex column shadow_wrap {{se_stts.txt_align}} pe_none z__100">
-          <div class="pa pa_txts mb_h_pos{{se_stts.cap_h_pos}} mb_v_pos{{se_stts.cap_v_pos}} h_pos{{se_stts.cap_h_pos}} v_pos{{se_stts.cap_v_pos}}">
+          <div class="pa pa_txts mb_h_pos{{cap_h_pos}} mb_v_pos{{cap_v_pos}} h_pos{{cap_h_pos}} v_pos{{cap_v_pos}}">
             {%- for block in section.blocks %}{% assign bk_stts = block.settings -%}
               {%- case block.type -%}
                  {%- when '1' -%}<h3 id="b_{{block.id}}" class="mt__0 mg__0 lh__1">{{bk_stts.title}}</h3>
@@ -127,6 +177,10 @@
           {
             "value": "2",
             "label": "Upload file"
+          },
+          {
+            "value": "3",
+            "label": "CDN video link"
           }
         ]
       },
@@ -142,7 +196,13 @@
         "type": "text",
         "id": "file_name",
         "label": "2. File name",
-        "info": "FIle name from uploaded files. File size is smaller 4 mb recommended"
+        "info": "File name from uploaded files. File size is smaller 4 mb recommended"
+      },
+      {
+        "type": "text",
+        "id": "cdn_video_url",
+        "label": "3. CDN Video URL",
+        "info": "Enter direct video URL from CDN (e.g., https://cdn.example.com/video.mp4)"
       },
       {
         "type": "paragraph",
@@ -230,10 +290,59 @@
         "label": "Caption Width"
       },
       {
+        "type": "select",
+        "id": "content_position",
+        "label": "Content position",
+        "default": "custom",
+        "info": "Choose a preset position or select 'Custom' to use range sliders below",
+        "options": [
+          {
+            "value": "top-left",
+            "label": "Top Left"
+          },
+          {
+            "value": "top-center",
+            "label": "Top Center"
+          },
+          {
+            "value": "top-right",
+            "label": "Top Right"
+          },
+          {
+            "value": "middle-left",
+            "label": "Middle Left"
+          },
+          {
+            "value": "middle-center",
+            "label": "Middle Center"
+          },
+          {
+            "value": "middle-right",
+            "label": "Middle Right"
+          },
+          {
+            "value": "bottom-left",
+            "label": "Bottom Left"
+          },
+          {
+            "value": "bottom-center",
+            "label": "Bottom Center"
+          },
+          {
+            "value": "bottom-right",
+            "label": "Bottom Right"
+          },
+          {
+            "value": "custom",
+            "label": "Custom (use sliders below)"
+          }
+        ]
+      },
+      {
          "type": "range",
          "id": "cap_v_pos",
-         "label": "Caption vertical position",
-         "info":" <= 50: Top position , > 50 bottom position",
+         "label": "Caption vertical position (Custom)",
+         "info":" <= 50: Top position , > 50 bottom position. Only used when 'Custom' is selected above",
          "default": 50,
          "min": 0,
          "max": 100,
@@ -243,8 +352,8 @@
       {
          "type": "range",
          "id": "cap_h_pos",
-         "label": "Caption horizontal position",
-         "info":" <= 50: Left position , > 50 right position",
+         "label": "Caption horizontal position (Custom)",
+         "info":" <= 50: Left position , > 50 right position. Only used when 'Custom' is selected above",
          "default": 50,
          "min": 0,
          "max": 100,
