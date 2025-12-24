@@ -2687,10 +2687,10 @@
           "video_rVPMzB": {
             "type": "video",
             "settings": {
-              "source": "1",
+              "source": "3",
               "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
               "file_name": "",
-              "cdn_video_url": "",
+              "cdn_video_url": "https://cdn.shopify.com/videos/c/o/v/1d68a1428cbf478d9274f68ad2706d67.mp4",
               "col_pr": "6",
               "col_pr_tb": "6",
               "col_pr_mb": "12",
