@@ -3339,6 +3339,31 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "image_text_rgUqPg": {
+        "type": "image_text",
+        "name": "7. Image with text",
+        "settings": {
+          "image": "shopify://shop_images/gemstone_cover_image_1000x1000_01ef89e6-7320-4661-810f-9c58d8096a96.webp",
+          "img_align": "center",
+          "img_position": "2",
+          "image_ratio": "auto",
+          "text_size": "60,18",
+          "title": "Gemstone Guidance",
+          "text": "<p><a href=\"https://cullenjewellery.com/education/lab-diamond-guidance\">Lab Grown Diamonds</a><br/><a href=\"https://cullenjewellery.com/education/lab-diamond-guidance/learn-about-the-4cs/diamond-colour-grading-explained\">Coloured Lab Grown Diamonds</a><br/><a href=\"https://cullenjewellery.com/education/gemstone-guidance/what-are-lab-grown-sapphires\">Lab Grown Sapphires</a><br/><a href=\"https://cullenjewellery.com/education/moissanite-guidance/buying-a-moissanite-ring\">Moissanite</a><br/><a href=\"https://cullenjewellery.com/education/moissanite-guidance/buying-a-moissanite-ring\">Coloured Moissanite</a><br/></p>",
+          "button_label": "Shop Now",
+          "button_link": "",
+          "open_link": "_blank",
+          "txt_align": "tc",
+          "use_shadow": false,
+          "cl_txt": "light",
+          "layout": "nt_full",
+          "cl_bg": "#253e2b",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -3349,7 +3374,8 @@
       "hero_video_dipKEd",
       "collection_list_6akWFW",
       "image_text_j3jVmi",
-      "collection_list_yDa7AB"
+      "collection_list_yDa7AB",
+      "image_text_rgUqPg"
     ]
   }
 }
