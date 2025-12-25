@@ -2963,7 +2963,7 @@
           "content_position": "bottom-left",
           "cap_v_pos": 100,
           "cap_h_pos": 100,
-          "txt_align": "tc",
+          "txt_align": "tl",
           "use_shadow": false,
           "cl_overlay": "#000",
           "cl_opacity": 0,
