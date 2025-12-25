@@ -15,7 +15,7 @@
   {%- endif -%}
   
   <div class="reviews_carousel js_carousel nt_slider prev_next_{{se_stts.btn_color}} btn_owl_{{se_stts.btn_owl}} dot_owl_{{se_stts.dot_owl}} dot_color_{{se_stts.dot_color}} btn_vi_{{se_stts.btn_vi}}" 
-       data-flickity='{"imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": {{se_stts.loop}},"prevNextButtons": {{se_stts.button}},"percentPosition": 1,"pageDots": {{se_stts.dot}}, "autoPlay" : {% if se_stts.autoplay %}{{ se_stts.au_time | times: 1000 }}{% else %}0{% endif %},"pauseAutoPlayOnHover" : {{se_stts.au_hover}}, "rightToLeft": {{settings.use_rtl}} }'>
+       data-flickity='{"imagesLoaded": 0,"adaptiveHeight": 0, "contain": 0, "groupCells": false, "dragThreshold" : 5, "cellAlign": "left","wrapAround": {{se_stts.loop}},"prevNextButtons": {{se_stts.button}},"percentPosition": 0,"pageDots": {{se_stts.dot}}, "autoPlay" : {% if se_stts.autoplay %}{{ se_stts.au_time | times: 1000 }}{% else %}0{% endif %},"pauseAutoPlayOnHover" : {{se_stts.au_hover}}, "rightToLeft": {{settings.use_rtl}} }'>
     {%- if section.blocks.size > 0 -%}
       {%- for block in section.blocks -%}
         <div class="review_card_cell" style="width: {{se_stts.card_width | default: 400}}px;">
