@@ -3885,6 +3885,26 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "rich_text_kgFw4b": {
+        "type": "rich_text",
+        "name": "3. Rich text",
+        "settings": {
+          "title": "What Our Clients Say",
+          "sub_title": "",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "content": "<p>Here's what our clients have to say about their Cullen experience.</p>",
+          "align": "tc",
+          "layout": "container",
+          "cl_bg": "",
+          "mg": "0px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -3899,6 +3919,7 @@
       "image_text_rgUqPg",
       "collection_list_VNUUBP",
       "collection_list_QtC39m",
+      "rich_text_kgFw4b",
       "reviews_carousel_JRn8xi",
       "instagram_feed_MaktJX",
       "faq_t4XKDD",
