@@ -3722,74 +3722,6 @@
           "pd_mb": "50px,,50px,"
         }
       },
-      "testimonials_WQ8tak": {
-        "type": "testimonials",
-        "blocks": {
-          "quote_rnL4EF": {
-            "type": "quote",
-            "settings": {
-              "image": "shopify://shop_images/unnamed_c8c1d01f-e1b9-4a75-8fe5-9d5bfba000cf.png",
-              "content": "<p>jazz was amazing and extremely knowledgeable and gave lots of advice and opinions and made us both feel very comfortable during our appointmentRead more</p>",
-              "title": "Author's name",
-              "pos": "",
-              "rating": 5
-            }
-          },
-          "quote_DGxdkf": {
-            "type": "quote",
-            "settings": {
-              "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-              "title": "Author's name",
-              "pos": "",
-              "rating": 5
-            }
-          },
-          "quote_WDjDHK": {
-            "type": "quote",
-            "settings": {
-              "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-              "title": "Author's name",
-              "pos": "",
-              "rating": 5
-            }
-          }
-        },
-        "block_order": [
-          "quote_rnL4EF",
-          "quote_DGxdkf",
-          "quote_WDjDHK"
-        ],
-        "disabled": true,
-        "name": "2. Testimonials",
-        "settings": {
-          "title": "What Our Clients Say",
-          "sub_title": "Here's what our clients have to say about their Cullen experience.",
-          "sub_font": "2",
-          "style_title": "title_1",
-          "ic_tt": "gem",
-          "show_clpr": false,
-          "layout_des": "1",
-          "ter_des": "1",
-          "col_pr": "4",
-          "col_pr_tb": "6",
-          "loop": true,
-          "au_time": 0,
-          "au_hover": true,
-          "button": false,
-          "btn_vi": "1",
-          "btn_owl": "1",
-          "btn_color": "0",
-          "dot": true,
-          "dot_owl": "2",
-          "dot_color": "1",
-          "layout": "wrap",
-          "cl_bg": "",
-          "mg": "50px,,50px,",
-          "pd": "",
-          "mg_mb": "",
-          "pd_mb": ""
-        }
-      },
       "reviews_carousel_JRn8xi": {
         "type": "reviews_carousel",
         "blocks": {
@@ -3902,9 +3834,8 @@
       "collection_list_yDa7AB",
       "image_text_rgUqPg",
       "collection_list_VNUUBP",
-      "reviews_carousel_JRn8xi",
       "collection_list_QtC39m",
-      "testimonials_WQ8tak",
+      "reviews_carousel_JRn8xi",
       "instagram_feed_MaktJX",
       "faq_t4XKDD"
     ]
