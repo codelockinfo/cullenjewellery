@@ -77,7 +77,7 @@
     "full_header": true,
     "sticky_header": true,
     "scroll_header": false,
-    "header_design": "3",
+    "header_design": "2",
     "h_transparent": false,
     "h_tr_top": false,
     "h_navmb": 60,
@@ -482,11 +482,27 @@
       "header_3": {
         "type": "header_3",
         "blocks": {
-          "dropdown_tTELBg": {
+          "dropdown_xCre8i": {
             "type": "dropdown",
             "settings": {
-              "title": "HOME",
-              "url": "shopify://collections/weeding-footwear",
+              "title": "Ready-To-Ship",
+              "url": "",
+              "open_link": "_self",
+              "menu": "ready-to-ship",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_ihbpzH": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Engagement",
+              "url": "",
               "open_link": "_self",
               "menu": "",
               "icon": "",
@@ -498,11 +514,27 @@
               "pos": "right"
             }
           },
-          "1585641835304": {
+          "dropdown_pK6Hqc": {
             "type": "dropdown",
             "settings": {
-              "title": "CLOTHING",
-              "url": "shopify://collections/woman-footwear",
+              "title": "Engagement",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_wr3LFT": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Engagement",
+              "url": "",
               "open_link": "_self",
               "menu": "",
               "icon": "",
@@ -516,8 +548,10 @@
           }
         },
         "block_order": [
-          "dropdown_tTELBg",
-          "1585641835304"
+          "dropdown_xCre8i",
+          "dropdown_ihbpzH",
+          "dropdown_pK6Hqc",
+          "dropdown_wr3LFT"
         ],
         "settings": {
           "height": 60,
@@ -2781,12 +2815,12 @@
               "col_pr_tb": "6",
               "col_pr_mb": "12",
               "heading": "Heirloom in the Making",
-              "heading_color": "#fff",
+              "heading_color": "#ffffff",
               "heading_size": 36,
               "heading_size_mb": 24,
               "heading_weight": 600,
               "subheading": "A handcrafted piece whose story begins with you.",
-              "subheading_color": "#fff",
+              "subheading_color": "#ffffff",
               "subheading_size": 20,
               "subheading_size_mb": 16,
               "subheading_weight": 400,
@@ -2794,7 +2828,7 @@
               "button_url": "https://cullenjewellery.com/bezels-future-heirlooms",
               "button_target": "_self",
               "button_bg_color": "#253e2b",
-              "button_text_color": "#fff",
+              "button_text_color": "#ffffff",
               "btn_round": false,
               "btn_fs": 16,
               "btn_fs_mb": 14,
@@ -2820,20 +2854,20 @@
               "col_pr_tb": "6",
               "col_pr_mb": "12",
               "heading": "",
-              "heading_color": "#fff",
+              "heading_color": "#ffffff",
               "heading_size": 36,
               "heading_size_mb": 24,
               "heading_weight": 600,
               "subheading": "",
-              "subheading_color": "#fff",
+              "subheading_color": "#ffffff",
               "subheading_size": 20,
               "subheading_size_mb": 16,
               "subheading_weight": 400,
               "button_label": "",
               "button_url": "https://cdn.shopify.com/videos/c/o/v/1d68a1428cbf478d9274f68ad2706d67.mp4",
               "button_target": "_self",
-              "button_bg_color": "#222",
-              "button_text_color": "#fff",
+              "button_bg_color": "#222222",
+              "button_text_color": "#ffffff",
               "btn_round": true,
               "btn_fs": 16,
               "btn_fs_mb": 14,
@@ -2860,7 +2894,7 @@
           "sub_font": "2",
           "section_height": 115,
           "cat_space": "30",
-          "cl_overlay": "#000",
+          "cl_overlay": "#000000",
           "cl_opacity": 0,
           "layout": "nt_full",
           "cl_bg": "",
@@ -2877,7 +2911,7 @@
             "type": "1",
             "settings": {
               "title": "Experience Cullen in Person",
-              "color": "#fff",
+              "color": "#ffffff",
               "fw_text": 600,
               "fs_text": 30,
               "lh_text": 0,
@@ -2899,7 +2933,7 @@
             "settings": {
               "font": "f__libre",
               "title": "View a range of our most popular engagement rings and wedding bands.",
-              "color": "#fff",
+              "color": "#ffffff",
               "fw_text": 400,
               "fs_text": 14,
               "lh_text": 0,
@@ -2928,9 +2962,9 @@
               "open_link2": "_blank",
               "btn_round": false,
               "btn_icon": false,
-              "cl_txt": "#fff",
-              "cl_bg": "#222",
-              "cl_bd": "#222",
+              "cl_txt": "#ffffff",
+              "cl_bg": "#222222",
+              "cl_bd": "#222222",
               "fs_text": 14,
               "fw_text": 600,
               "h": 40,
@@ -2965,7 +2999,7 @@
           "cap_h_pos": 100,
           "txt_align": "tl",
           "use_shadow": false,
-          "cl_overlay": "#000",
+          "cl_overlay": "#000000",
           "cl_opacity": 0,
           "layout": "nt_full",
           "cl_bg": "",
@@ -2982,7 +3016,7 @@
             "type": "1",
             "settings": {
               "title": "Experience Cullen in Person",
-              "color": "#fff",
+              "color": "#ffffff",
               "fw_text": 600,
               "fs_text": 30,
               "lh_text": 0,
@@ -3004,7 +3038,7 @@
             "settings": {
               "font": "f__libre",
               "title": "View a range of our most popular engagement rings and wedding bands.",
-              "color": "#fff",
+              "color": "#ffffff",
               "fw_text": 400,
               "fs_text": 14,
               "lh_text": 0,
@@ -3033,9 +3067,9 @@
               "open_link2": "_blank",
               "btn_round": false,
               "btn_icon": false,
-              "cl_txt": "#fff",
-              "cl_bg": "#222",
-              "cl_bd": "#222",
+              "cl_txt": "#ffffff",
+              "cl_bg": "#222222",
+              "cl_bd": "#222222",
               "fs_text": 14,
               "fw_text": 600,
               "h": 40,
@@ -3070,7 +3104,7 @@
           "cap_h_pos": 57,
           "txt_align": "tc",
           "use_shadow": false,
-          "cl_overlay": "#000",
+          "cl_overlay": "#000000",
           "cl_opacity": 0,
           "layout": "nt_full",
           "cl_bg": "",
@@ -3078,6 +3112,146 @@
           "pd": "",
           "mg_mb": "",
           "pd_mb": ""
+        }
+      },
+      "header_2": {
+        "type": "header_2",
+        "blocks": {
+          "dropdown_ak3YcN": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Ready-To-Ship",
+              "url": "",
+              "open_link": "_self",
+              "menu": "ready-to-ship",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_CxE7D8": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Engagement",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_WHEEcE": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Wedding",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_WEt784": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Fine Jewelry",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "header_2-1": {
+            "type": "logo",
+            "settings": {}
+          },
+          "dropdown_jC4EX4": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Education",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_zztWzQ": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Contact",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          },
+          "dropdown_MEmfi4": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Visit",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos": "right"
+            }
+          }
+        },
+        "block_order": [
+          "dropdown_ak3YcN",
+          "dropdown_CxE7D8",
+          "dropdown_WHEEcE",
+          "dropdown_WEt784",
+          "header_2-1",
+          "dropdown_jC4EX4",
+          "dropdown_zztWzQ",
+          "dropdown_MEmfi4"
+        ],
+        "settings": {
+          "height": 62,
+          "arrow": false,
+          "source": "1",
+          "txt": "Welcome to our store!",
+          "social": "2",
+          "align": "tc",
+          "hover": "hover_side_up"
         }
       }
     },
