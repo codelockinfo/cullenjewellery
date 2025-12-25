@@ -3261,6 +3261,84 @@
           "align": "tc",
           "hover": "hover_side_up"
         }
+      },
+      "collection_list_yDa7AB": {
+        "type": "collection-list",
+        "blocks": {
+          "collection_8ifFjY": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Shop_By_Category_-_Engagement_-_version_2_1300x1300_42d8cbe2-f94d-4392-b1dd-4a1e8f8e770c.webp",
+              "img_align": "center",
+              "title": "Engagement →",
+              "url": ""
+            }
+          },
+          "collection_6EDNFD": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Shop_By_Category_-_Wedding_700x700_b42ef79c-685a-4d60-ba87-b2879642b047.webp",
+              "img_align": "center",
+              "title": "Wedding →",
+              "url": ""
+            }
+          },
+          "collection_4QymiB": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Shop_By_Category_-_Fine_Jewellery_500x500_5ca7cae0-ddfb-4dda-bcfe-c1590842ebfd.webp",
+              "img_align": "center",
+              "title": "Fine jewelry →",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection_8ifFjY",
+          "collection_6EDNFD",
+          "collection_4QymiB"
+        ],
+        "name": "5. Collection list",
+        "settings": {
+          "title": "Shop By Category",
+          "sub_title": "Explore engagement rings, women's wedding rings, men's wedding rings and fine jewelry.",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "cat_layout": "1",
+          "hoverz": true,
+          "cat_design": "5",
+          "cat_space": "30",
+          "image_ratio": "ratio_nt",
+          "col": "3",
+          "col_md": "4",
+          "col_mb": "6",
+          "spn_txt": "",
+          "pr_txt": "",
+          "loop": true,
+          "autoplay": true,
+          "au_time": 6,
+          "au_hover": true,
+          "button": false,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "0",
+          "dot": true,
+          "dot_owl": "1",
+          "dot_color": "1",
+          "hidden": false,
+          "cp_code": false,
+          "layout": "wrap",
+          "cl_bg": "",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -3270,7 +3348,8 @@
       "image_text_overlay_KX9BUV",
       "hero_video_dipKEd",
       "collection_list_6akWFW",
-      "image_text_j3jVmi"
+      "image_text_j3jVmi",
+      "collection_list_yDa7AB"
     ]
   }
 }
