@@ -5,8 +5,9 @@ assign active_first = section.settings.active_first
 assign se_blocks = section.blocks
 assign check = false
 assign check_first = true -%}
-<div>dfdkjfdkjfkj</div>
+
 <div class="nt_se_{{sid}} nt_bg_overlay pr oh cover_norepeat faq_des{{section.settings.faq_des}}{%- if image != blank %} lazyload nt_parallax_{{section.settings.use_pr}}{%- endif -%}"{% if image != blank %} data-bgset="{{ image | img_url: '1x1' }}" data-ratio="{{image.aspect_ratio}}" data-sizes="auto" data-parent-fit="cover"{% endif %}>
+  <div>dfdkjfdkjfkj</div>
   <div class="{{section.settings.layout}} pr z_100">
     <div class="mt__30 row al_center">
        {%- if se_blocks.size > 0 -%}
