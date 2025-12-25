@@ -2974,6 +2974,111 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "hero_video_dipKEd": {
+        "type": "hero_video",
+        "blocks": {
+          "1_a76MqQ": {
+            "type": "1",
+            "settings": {
+              "title": "Experience Cullen in Person",
+              "color": "#fff",
+              "fw_text": 600,
+              "fs_text": 30,
+              "lh_text": 0,
+              "ls_text": 0,
+              "fs_mb_text": 15,
+              "lh_mb_text": 0,
+              "ls_mb_text": 0
+            }
+          },
+          "6_zTN4Nr": {
+            "type": "6",
+            "settings": {
+              "sp": 10,
+              "sp_mb": 10
+            }
+          },
+          "2_iYg8M7": {
+            "type": "2",
+            "settings": {
+              "font": "f__libre",
+              "title": "View a range of our most popular engagement rings and wedding bands.",
+              "color": "#fff",
+              "fw_text": 400,
+              "fs_text": 14,
+              "lh_text": 0,
+              "ls_text": 0,
+              "fs_mb_text": 14,
+              "lh_mb_text": 0,
+              "ls_mb_text": 0,
+              "hide": false
+            }
+          },
+          "6_ftXDii": {
+            "type": "6",
+            "settings": {
+              "sp": 10,
+              "sp_mb": 10
+            }
+          },
+          "3_enqKhB": {
+            "type": "3",
+            "settings": {
+              "title": "BOOK AN APPOINMENT",
+              "btn_link": "https://cullenjewellery.com/visit",
+              "open_link": "_blank",
+              "title2": "Shop Now 2",
+              "btn_link2": "",
+              "open_link2": "_blank",
+              "btn_round": false,
+              "btn_icon": false,
+              "cl_txt": "#fff",
+              "cl_bg": "#222",
+              "cl_bd": "#222",
+              "fs_text": 14,
+              "fw_text": 600,
+              "h": 40,
+              "ls_text": 0,
+              "fs_mb_text": 14,
+              "h_mb": 40,
+              "ls_mb_text": 0
+            }
+          }
+        },
+        "block_order": [
+          "1_a76MqQ",
+          "6_zTN4Nr",
+          "2_iYg8M7",
+          "6_ftXDii",
+          "3_enqKhB"
+        ],
+        "name": "1. Hero video",
+        "settings": {
+          "source": "3",
+          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "file_name": "",
+          "cdn_video_url": "https://cdn.shopify.com/videos/c/o/v/1d68a1428cbf478d9274f68ad2706d67.mp4",
+          "se_height": "full",
+          "use_custom_h": "1",
+          "h_des": "600px",
+          "h_tb": "500px",
+          "h_mb": "350px",
+          "caption_w": "2",
+          "content_position": "bottom-left",
+          "cap_v_pos": 51,
+          "cap_h_pos": 100,
+          "txt_align": "tl",
+          "use_shadow": false,
+          "cl_overlay": "#000",
+          "cl_opacity": 0,
+          "layout": "nt_full",
+          "cl_bg": "",
+          "mg": "px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -2981,6 +3086,7 @@
       "hero_video_HiVLgx",
       "collection_list_yBEUBD",
       "image_text_overlay_KX9BUV",
+      "hero_video_dipKEd",
       "collection_list_6akWFW",
       "image_text_j3jVmi"
     ]
