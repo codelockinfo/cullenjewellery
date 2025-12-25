@@ -437,16 +437,6 @@
               "col": "4"
             }
           },
-          "1595994733101": {
-            "type": "social",
-            "settings": {
-              "social": "2",
-              "border_bl": true,
-              "black_bl": false,
-              "hide": true,
-              "col": "4"
-            }
-          },
           "header_top-2": {
             "type": "cur",
             "settings": {
@@ -457,7 +447,6 @@
         },
         "block_order": [
           "text2_Ck9mF9",
-          "1595994733101",
           "header_top-2"
         ],
         "settings": {
