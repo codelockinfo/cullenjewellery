@@ -3838,7 +3838,7 @@
             "settings": {
               "icon": "pe-7s-help2",
               "title": "SUPPORT 24/7",
-              "text": "Contact us 24 hours a day, 7 days a week"
+              "text": ""
             }
           },
           "shipping_EhQwwj": {
@@ -3846,7 +3846,7 @@
             "settings": {
               "icon": "pe-7s-refresh",
               "title": "30 DAYS RETURN",
-              "text": "Simply return it within 30 days for an exchange."
+              "text": ""
             }
           },
           "shipping_CkQLVp": {
@@ -3854,7 +3854,7 @@
             "settings": {
               "icon": "pe-7s-door-lock",
               "title": "100% PAYMENT SECURE",
-              "text": "We ensure secure payment with PEV"
+              "text": ""
             }
           }
         },
@@ -3881,7 +3881,7 @@
           "cl_hd": "#222222",
           "cl_cot": "#878787",
           "mg": "50px,,,",
-          "pd": "",
+          "pd": "10px",
           "mg_mb": "",
           "pd_mb": ""
         }
