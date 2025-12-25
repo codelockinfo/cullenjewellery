@@ -3908,6 +3908,18 @@
       },
       "custom_accordian_NNK8mx": {
         "type": "custom-accordian",
+        "blocks": {
+          "accordion_HNnWUR": {
+            "type": "accordion",
+            "settings": {
+              "title": "Carbon Neutral",
+              "content": "We acknowledge that producing a finished diamond, whether mined or lab, requires significant energy resources. That’s why we offset the carbon footprint associated with all of our lab grown diamonds. We invest in verified renewable energy projects in the countries and communities where the diamonds are grown, ensuring that the carbon emissions from the diamonds are fully offset."
+            }
+          }
+        },
+        "block_order": [
+          "accordion_HNnWUR"
+        ],
         "name": "Careers Split Section",
         "settings": {
           "desktop_image": "shopify://shop_images/Initiatives_-_One_Tree_Planted_1000x1000_0dbf26b5-6e26-49b9-bd2f-beac55b7b60a.webp",
