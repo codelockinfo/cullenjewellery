@@ -3355,7 +3355,7 @@
           "button_link": "",
           "open_link": "_blank",
           "txt_align": "tl",
-          "use_shadow": false,
+          "use_shadow": true,
           "cl_txt": "light",
           "layout": "nt_full",
           "cl_bg": "#253e2b",
