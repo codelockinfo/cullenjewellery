@@ -7392,7 +7392,7 @@ background-position: 50% 50%;
   .cat_space_30 .cat_space_item {
       padding-left: 15px;
       padding-right: 15px;
-      margin-bottom: 30px
+      /* margin-bottom: 30px */
   }
   .header_8 a.icon_search {display: none}
   body:not(.des_header_1):not(.des_header_6):not(.des_header_10) #nt_menu_canvas.lazyload {
