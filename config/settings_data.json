@@ -430,20 +430,10 @@
           "text2_Ck9mF9": {
             "type": "text2",
             "settings": {
-              "text": "<p>Welcome customers to your store.</p>",
-              "effect": "1",
+              "text": "<p>San Diego Showroom Opening Soon!</p>",
+              "effect": "0",
               "au_time": 3.5,
               "hide": false,
-              "col": "4"
-            }
-          },
-          "1595994733101": {
-            "type": "social",
-            "settings": {
-              "social": "2",
-              "border_bl": true,
-              "black_bl": false,
-              "hide": true,
               "col": "4"
             }
           },
@@ -457,7 +447,6 @@
         },
         "block_order": [
           "text2_Ck9mF9",
-          "1595994733101",
           "header_top-2"
         ],
         "settings": {
@@ -466,7 +455,7 @@
           "cl": "#ffffff",
           "cl_a": "#222222",
           "cl_cr": "#b59677",
-          "bg": "#3e3e3e",
+          "bg": "#236339",
           "bg_op": 100,
           "show_border": false,
           "bd_cl": "#000000",
