@@ -11,7 +11,7 @@
       {%- assign block_width_tablet = bk_stts.col_pr_tb | default: '6' -%}
       {%- assign block_width_mobile = bk_stts.col_pr_mb | default: '12' -%}
       
-      <div class="cat_space_item bk_{{block.id}} col-lg-{{block_width_desktop}} col-md-{{block_width_tablet}} col-{{block_width_mobile}}">
+      <div class="cat_space_item bk_{{block.id}} col-lg-{{block_width_desktop}} col-md-{{block_width_tablet}} col-{{block_width_mobile}}{% if block.type == 'video' %} is_video_block{% endif %}">
         <div class="nt_banner_block oh pr middle center{% if block.type == 'video' %} banner_has_video{% endif %}{% if block.type == 'video' and bk_stts.source == '1' %} video_loading js_video{% endif %}"{% if block.type == 'video' and bk_stts.source == '1' %} data-id="{{ bk_stts.video_url.id }}"{% endif %}>
           
           {%- comment -%} Background: Image or Video {%- endcomment -%}
@@ -88,7 +88,7 @@
                      style="padding-top:{{ 1 | divided_by: image_desktop.aspect_ratio | times: 100}}%"></div>
               {%- endif -%}
               
-              {%- if image_mobile != blank and image_mobile != image_desktop -%}
+              {%- if image_mobile != blank -%}
                 <div class="nt_bg_lz lazyload item__position {{bk_stts.img_align}} mobile_image" 
                      data-bgset="{{ image_mobile | img_url: '1x1' }}" 
                      data-ratio="{{image_mobile.aspect_ratio}}" 
@@ -263,6 +263,10 @@
       display: block;
     }
     @media (max-width: 767px) {
+      {%- comment -%} Hide video blocks on mobile devices {%- endcomment -%}
+      .nt_se_{{sid}} .cat_space_item.is_video_block {
+        display: none !important;
+      }
       .nt_se_{{sid}} .desktop_image {
         display: none;
       }
