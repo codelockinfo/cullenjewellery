@@ -43,34 +43,8 @@
   <div id="nt_wrapper">
     {%- render 'header',t_name:t_name -%}
     <div id="nt_content">{{ content_for_layout }}</div>
-    <footer id="nt_footer" class="bgbl footer-1">{%- section 'footer_top' -%}{%- section 'footer_bot' -%}</footer>
+    <footer id="nt_footer" class="bgbl footer-1">{%- section 'footer_top' -%}{%- section 'footer_bot' -%}{%- section 'custom-footer' -%}</footer>
   </div>
   {%- render 'div_html',t_name:t_name -%}
 </body>
 </html>
-
-
-<style>
-
-.nt_se_image_text_overlay_KX9BUV.se_height_cus_h .js_full_ht4 {
-    padding-top: 243px !important;
-    background: #253e2b !important;
-}
-.fs__30 {
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    margin-left: -14%;
-}
-.flex p {
-      font-size: 32px;
-    color: #ffffff;
-}
-.flex {
-  align-items: center;
-    text-align: left !important;
-}
-a {
-    color: #fff;
-    transition: .3s;
-}
-</style>
