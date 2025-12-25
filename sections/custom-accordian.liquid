@@ -1,0 +1,153 @@
+<div class="careers-split-section">
+  <div class="careers-container">
+
+    <!-- LEFT IMAGE AREA -->
+    <div class="careers-left">
+
+      <picture>
+        {% if section.settings.mobile_image != blank %}
+          <source media="(max-width: 767px)" srcset="{{ section.settings.mobile_image | img_url: 'master' }}">
+        {% endif %}
+        <img
+          src="{{ section.settings.desktop_image | img_url: 'master' }}"
+          alt="Careers Image"
+          class="careers-bg-image"
+        >
+      </picture>
+
+      <!-- Overlay Content -->
+      <div class="careers-overlay">
+        {% if section.settings.overlay_heading != blank %}
+          <div class="overlay-title">{{ section.settings.overlay_heading }}</div>
+        {% endif %}
+
+        {% if section.settings.overlay_subheading != blank %}
+          <span class="overlay-sub">{{ section.settings.overlay_subheading }}</span>
+        {% endif %}
+
+        {% if section.settings.overlay_logo != blank %}
+          <img src="{{ section.settings.overlay_logo | img_url: '200x' }}" class="overlay-logo">
+        {% endif %}
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="careers-right">
+      {% if section.settings.right_heading != blank %}
+        <div class="custom-right-heading">{{ section.settings.right_heading }}</div>
+      {% endif %}
+
+      {% if section.settings.right_text != blank %}
+        <div class="custom-right-text">{{ section.settings.right_text }}</div>
+      {% endif %}
+
+      <div class="careers-accordion">
+        {% for block in section.blocks %}
+          <div class="accordion-item">
+            <button class="accordion-title">
+              {{ block.settings.title }}
+              <span>+</span>
+            </button>
+            <div class="accordion-content">
+              {{ block.settings.content }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".accordion-title").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const span = btn.querySelector("span");
+      const accordionItem = btn.closest(".accordion-item");
+      const isCurrentlyOpen = content.style.display === "block";
+      
+      // Close all other accordions first
+      document.querySelectorAll(".accordion-content").forEach(otherContent => {
+        if (otherContent !== content) {
+          otherContent.style.display = "none";
+        }
+      });
+      
+      // Reset all spans to +
+      document.querySelectorAll(".accordion-title span").forEach(otherSpan => {
+        if (otherSpan !== span) {
+          otherSpan.textContent = "+";
+        }
+      });
+      
+      // Remove active class from all accordion items
+      document.querySelectorAll(".accordion-item").forEach(otherItem => {
+        if (otherItem !== accordionItem) {
+          otherItem.classList.remove("active");
+        }
+      });
+      
+      // Toggle the clicked accordion
+      if (isCurrentlyOpen) {
+        content.style.display = "none";
+        span.textContent = "+";
+        accordionItem.classList.remove("active");
+      } else {
+        content.style.display = "block";
+        span.textContent = "−";
+        accordionItem.classList.add("active");
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.careers-split-section .careers-left {
+  flex-shrink: 0;
+  min-height: 600px;
+  height: auto;
+}
+.careers-split-section .careers-container {
+  align-items: flex-start;
+}
+.careers-split-section .careers-bg-image {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  display: block;
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Careers Split Section",
+  "settings": [
+    { "type": "image_picker", "id": "desktop_image", "label": "Desktop Image" },
+    { "type": "image_picker", "id": "mobile_image", "label": "Mobile Image" },
+    { "type": "text", "id": "overlay_heading", "label": "Overlay Heading", "default": "GROW" },
+    { "type": "text", "id": "overlay_subheading", "label": "Overlay Subheading", "default": "with" },
+    { "type": "image_picker", "id": "overlay_logo", "label": "Overlay Logo" },
+    { "type": "text", "id": "right_heading", "label": "Right Heading", "default": "Find your fit" },
+    { "type": "textarea", "id": "right_text", "label": "Right Text" }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "Accordion Item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "content", "label": "Content" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Careers Split Section" }
+  ]
+}
+{% endschema %}
