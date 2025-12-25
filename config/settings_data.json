@@ -3594,7 +3594,7 @@
           "image_ratio": "ratio_nt",
           "image_size": "nt_cover",
           "image_position": "8",
-          "layout": "nt_full",
+          "layout": "container",
           "cl_bg": "#fff",
           "mg": "50px,,50px,",
           "pd": "",
