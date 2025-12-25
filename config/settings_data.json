@@ -2960,7 +2960,7 @@
           "h_tb": "500px",
           "h_mb": "350px",
           "caption_w": "2",
-          "content_position": "custom",
+          "content_position": "top-left",
           "cap_v_pos": 50,
           "cap_h_pos": 50,
           "txt_align": "tc",
