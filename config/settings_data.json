@@ -2967,7 +2967,7 @@
           "use_shadow": false,
           "cl_overlay": "#000000",
           "cl_opacity": 0,
-          "layout": "nt_full",
+          "layout": "container",
           "cl_bg": "",
           "mg": "",
           "pd": "",

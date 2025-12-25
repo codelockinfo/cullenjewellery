@@ -4732,7 +4732,7 @@ i.dn.title_6 {
   .cat_space_item {
     padding-left: 5px;
     padding-right: 5px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   .cat_space_0 {
       margin-left: 0;
