@@ -3796,9 +3796,9 @@
           "review_jpdU6H": {
             "type": "review",
             "settings": {
-              "platform": "trustpilot",
+              "platform": "google",
               "reviewer_name": "Customer Name",
-              "profile_bg_color": "#4285F4",
+              "profile_bg_color": "#4285f4",
               "rating": 5,
               "time_ago": "2 days ago",
               "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
