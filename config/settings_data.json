@@ -3804,10 +3804,49 @@
               "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
               "read_more_link": ""
             }
+          },
+          "review_atDwwY": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285f4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          },
+          "review_PCxNqV": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285f4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          },
+          "review_Ag3FKT": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285f4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
           }
         },
         "block_order": [
-          "review_jpdU6H"
+          "review_jpdU6H",
+          "review_atDwwY",
+          "review_PCxNqV",
+          "review_Ag3FKT"
         ],
         "name": "Reviews Carousel",
         "settings": {
