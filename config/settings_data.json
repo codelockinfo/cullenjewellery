@@ -3793,58 +3793,10 @@
       "reviews_carousel_JRn8xi": {
         "type": "reviews_carousel",
         "blocks": {
-          "review_ndnAqE": {
-            "type": "review",
-            "settings": {
-              "platform": "google",
-              "reviewer_name": "Customer Name",
-              "profile_bg_color": "#4285F4",
-              "rating": 5,
-              "time_ago": "2 days ago",
-              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
-              "read_more_link": ""
-            }
-          },
-          "review_khPfr3": {
-            "type": "review",
-            "settings": {
-              "platform": "google",
-              "reviewer_name": "Customer Name",
-              "profile_bg_color": "#4285F4",
-              "rating": 5,
-              "time_ago": "2 days ago",
-              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
-              "read_more_link": ""
-            }
-          },
-          "review_EF6k7W": {
-            "type": "review",
-            "settings": {
-              "platform": "google",
-              "reviewer_name": "Customer Name",
-              "profile_bg_color": "#4285F4",
-              "rating": 5,
-              "time_ago": "2 days ago",
-              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
-              "read_more_link": ""
-            }
-          },
-          "review_JEEBq4": {
-            "type": "review",
-            "settings": {
-              "platform": "google",
-              "reviewer_name": "Customer Name",
-              "profile_bg_color": "#4285F4",
-              "rating": 5,
-              "time_ago": "2 days ago",
-              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
-              "read_more_link": ""
-            }
-          },
           "review_jpdU6H": {
             "type": "review",
             "settings": {
-              "platform": "google",
+              "platform": "trustpilot",
               "reviewer_name": "Customer Name",
               "profile_bg_color": "#4285F4",
               "rating": 5,
@@ -3855,10 +3807,6 @@
           }
         },
         "block_order": [
-          "review_ndnAqE",
-          "review_khPfr3",
-          "review_EF6k7W",
-          "review_JEEBq4",
           "review_jpdU6H"
         ],
         "name": "Reviews Carousel",
