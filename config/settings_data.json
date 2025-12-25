@@ -3729,7 +3729,7 @@
             "type": "quote",
             "settings": {
               "image": "shopify://shop_images/unnamed_c8c1d01f-e1b9-4a75-8fe5-9d5bfba000cf.png",
-              "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+              "content": "<p>jazz was amazing and extremely knowledgeable and gave lots of advice and opinions and made us both feel very comfortable during our appointmentRead more</p>",
               "title": "Author's name",
               "pos": "",
               "rating": 5
@@ -3759,6 +3759,7 @@
           "quote_DGxdkf",
           "quote_WDjDHK"
         ],
+        "disabled": true,
         "name": "2. Testimonials",
         "settings": {
           "title": "What Our Clients Say",
@@ -3788,6 +3789,105 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "reviews_carousel_JRn8xi": {
+        "type": "reviews_carousel",
+        "blocks": {
+          "review_ndnAqE": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285F4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          },
+          "review_khPfr3": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285F4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          },
+          "review_EF6k7W": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285F4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          },
+          "review_JEEBq4": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285F4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          },
+          "review_jpdU6H": {
+            "type": "review",
+            "settings": {
+              "platform": "google",
+              "reviewer_name": "Customer Name",
+              "profile_bg_color": "#4285F4",
+              "rating": 5,
+              "time_ago": "2 days ago",
+              "review_text": "<p>Add your customer review text here. This is a great way to showcase positive feedback from your customers.</p>",
+              "read_more_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "review_ndnAqE",
+          "review_khPfr3",
+          "review_EF6k7W",
+          "review_JEEBq4",
+          "review_jpdU6H"
+        ],
+        "name": "Reviews Carousel",
+        "settings": {
+          "title": "",
+          "sub_title": "",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "bg_color": "#1a4d3a",
+          "card_width": 400,
+          "loop": true,
+          "au_time": 0,
+          "autoplay": false,
+          "au_hover": true,
+          "button": false,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "2",
+          "dot": false,
+          "dot_owl": "2",
+          "dot_color": "2",
+          "layout": "nt_full",
+          "mg": "",
+          "pd": "60px,,60px,",
+          "mg_mb": "",
+          "pd_mb": "40px,,40px,"
+        }
       }
     },
     "content_for_index": [
@@ -3804,7 +3904,8 @@
       "collection_list_QtC39m",
       "instagram_feed_MaktJX",
       "faq_t4XKDD",
-      "testimonials_WQ8tak"
+      "testimonials_WQ8tak",
+      "reviews_carousel_JRn8xi"
     ]
   }
 }
