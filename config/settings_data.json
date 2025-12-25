@@ -3915,10 +3915,18 @@
               "title": "Carbon Neutral",
               "content": "We acknowledge that producing a finished diamond, whether mined or lab, requires significant energy resources. That’s why we offset the carbon footprint associated with all of our lab grown diamonds. We invest in verified renewable energy projects in the countries and communities where the diamonds are grown, ensuring that the carbon emissions from the diamonds are fully offset."
             }
+          },
+          "accordion_iqLFWc": {
+            "type": "accordion",
+            "settings": {
+              "title": "Trees For The Future",
+              "content": "We plant 1 tree for every jewellery purchase through our partnership with Trees For The Future. This initiative focuses on reforestation efforts, particularly in Africa, where significant habitat loss has occurred due to mining. This reinforces our commitment to environmental responsibility and sustainable practices by reducing our carbon footprint."
+            }
           }
         },
         "block_order": [
-          "accordion_HNnWUR"
+          "accordion_HNnWUR",
+          "accordion_iqLFWc"
         ],
         "name": "Careers Split Section",
         "settings": {
