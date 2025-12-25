@@ -3520,6 +3520,84 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "instagram_feed_MaktJX": {
+        "type": "instagram_feed",
+        "blocks": {
+          "1_me8YgM": {
+            "type": "1",
+            "settings": {
+              "title": "Instagram",
+              "sub_title": "Learn, engage and grow. Connect with Cullen for all things engagement, wedding and fine jewelry.",
+              "sub_font": "2",
+              "style_title": "title_7 +la",
+              "ic_tt": "gem",
+              "show_clpr": false
+            }
+          },
+          "img_4WDQMX": {
+            "type": "img",
+            "settings": {
+              "image": "shopify://shop_images/Screenshot_2025-04-28_at_1.58.23_PM_400x400_a8ddcdbd-8ddd-4cdf-8f67-e23ed0da4f95.webp",
+              "url": "https://www.instagram.com/cullenjewellery/reel/DIxxgBsRSNc/"
+            }
+          },
+          "img_kUPEL9": {
+            "type": "img",
+            "settings": {
+              "url": ""
+            }
+          },
+          "img_jrDfXE": {
+            "type": "img",
+            "settings": {
+              "url": ""
+            }
+          },
+          "img_AthMnh": {
+            "type": "img",
+            "settings": {
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "1_me8YgM",
+          "img_4WDQMX",
+          "img_kUPEL9",
+          "img_jrDfXE",
+          "img_AthMnh"
+        ],
+        "name": "1. Instagram feed",
+        "settings": {
+          "open_link": "_self",
+          "layout_des": "1",
+          "space": "15",
+          "rounded_ins": "0",
+          "col_pr": "3",
+          "col_pr_tb": "3",
+          "col_pr_mb": "6",
+          "loop": false,
+          "au_time": 0,
+          "au_hover": true,
+          "button": false,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "0",
+          "dot": true,
+          "dot_owl": "1",
+          "dot_color": "1",
+          "use_eq_height": true,
+          "image_ratio": "ratio_nt",
+          "image_size": "nt_cover",
+          "image_position": "8",
+          "layout": "nt_full",
+          "cl_bg": "#fff",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -3533,7 +3611,8 @@
       "collection_list_yDa7AB",
       "image_text_rgUqPg",
       "collection_list_VNUUBP",
-      "collection_list_QtC39m"
+      "collection_list_QtC39m",
+      "instagram_feed_MaktJX"
     ]
   }
 }
