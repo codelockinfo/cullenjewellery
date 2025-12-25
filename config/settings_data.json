@@ -550,7 +550,7 @@
               "title": "QUICK LINKS",
               "menu": "quick-links",
               "order": "1",
-              "cl": "2",
+              "cl": "15",
               "cl_tb": "6",
               "cl_mb": "12"
             }
@@ -561,7 +561,7 @@
               "title": "ABOUT US",
               "menu": "about-us",
               "order": "1",
-              "cl": "2",
+              "cl": "15",
               "cl_tb": "6",
               "cl_mb": "12"
             }
@@ -572,7 +572,7 @@
               "title": "CLIENT CARE",
               "menu": "client-care",
               "order": "1",
-              "cl": "2",
+              "cl": "15",
               "cl_tb": "6",
               "cl_mb": "12"
             }
