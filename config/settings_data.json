@@ -2795,7 +2795,7 @@
           "image_ratio": "auto",
           "text_size": "60,18",
           "title": "Ring Collections",
-          "text": "<p><a href=\"https://cullenjewellery.com/engagement-rings/ready-to-ship\">Ready-To-Ship</a><br/><a href=\"https://cullenjewellery.com/fine-jewellery/statement-rings\">Statement</a><br/><a href=\"https://cullenjewellery.com/fine-jewellery/minimal-rings\">Minimal</a><br/><a href=\"https://cullenjewellery.com/fine-jewellery/stacker-rings\">Stacker</a><br/><a href=\"https://cullenjewellery.com/engagement-rings/bezel\">Bezel</a><br/><a href=\"https://cullenjewellery.com/engagement-rings/east-west\">East-West</a></p>",
+          "text": "<p>Ready-To-Ship<br/>Statement<br/>Minimal<br/>Stacker<br/>Bezel<br/>East-West</p>",
           "button_label": "Shop Now",
           "button_link": "",
           "open_link": "_blank",
