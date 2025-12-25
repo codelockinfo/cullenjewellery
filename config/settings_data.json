@@ -3871,7 +3871,7 @@
           "ic_tt": "gem",
           "show_clpr": false,
           "bg_color": "#1a4d3a",
-          "card_width": 440,
+          "card_width": 430,
           "loop": true,
           "au_time": 0,
           "autoplay": false,
