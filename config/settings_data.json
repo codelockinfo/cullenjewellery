@@ -430,16 +430,35 @@
           "text2_Ck9mF9": {
             "type": "text2",
             "settings": {
-              "text": "<h6>Experience Cullen in Person</h6>",
+              "text": "<p>Welcome customers to your store.</p>",
               "effect": "1",
               "au_time": 3.5,
               "hide": false,
               "col": "4"
             }
+          },
+          "1595994733101": {
+            "type": "social",
+            "settings": {
+              "social": "2",
+              "border_bl": true,
+              "black_bl": false,
+              "hide": true,
+              "col": "4"
+            }
+          },
+          "header_top-2": {
+            "type": "cur",
+            "settings": {
+              "hide": true,
+              "col": "4"
+            }
           }
         },
         "block_order": [
-          "text2_Ck9mF9"
+          "text2_Ck9mF9",
+          "1595994733101",
+          "header_top-2"
         ],
         "settings": {
           "height": 50,
@@ -550,7 +569,7 @@
               "title": "QUICK LINKS",
               "menu": "quick-links",
               "order": "1",
-              "cl": "15",
+              "cl": "2",
               "cl_tb": "6",
               "cl_mb": "12"
             }
@@ -561,7 +580,7 @@
               "title": "ABOUT US",
               "menu": "about-us",
               "order": "1",
-              "cl": "15",
+              "cl": "2",
               "cl_tb": "6",
               "cl_mb": "12"
             }
@@ -572,7 +591,7 @@
               "title": "CLIENT CARE",
               "menu": "client-care",
               "order": "1",
-              "cl": "15",
+              "cl": "2",
               "cl_tb": "6",
               "cl_mb": "12"
             }
@@ -582,10 +601,10 @@
             "settings": {
               "logo_width": 200,
               "title": "CONTACT US",
-              "content": "<p><i class=\"pegk pe-7s-call\"></i> <span>(618) 681-5688</span></p>\n<p><i class=\"pegk pe-7s-mail\"></i><span> <a href=\"mailto:mailto:sales@cullenjewellery.com\">contact@company.com</a></span></p>\n<a href=\"#\"><p><i class=\"pegk pe-7s-call\"></i> <span>Appoinment only</span></p></a><div style=\"color:#ffffff; font-family:Arial, sans-serif; font-size:14px; line-height:1.6;\">\n\n    <div style=\"font-size:15px; font-weight:bold; margin-bottom:8px; text-transform:uppercase;\">\n        CONTACT HOURS\n    </div>\n\n    <div style=\"margin-bottom:4px;\">\n        <strong>MON–WED:</strong> 3:30 AM – 11:30 AM\n    </div>\n\n    <div style=\"margin-bottom:4px;\">\n        <strong>THU–FRI:</strong> 3:30 AM – 1:30 PM\n    </div>\n\n    <div style=\"margin-bottom:8px;\">\n        <strong>SAT:</strong> 2:30 AM – 10:30 AM\n    </div>\n\n    <a href=\"#\" style=\"display:inline-block; color:#ffffff; text-decoration:none; font-weight:500; margin-bottom:4px;\">\n        Get In Touch\n    </a><br>\n\n    <a href=\"#\" style=\"display:inline-block; color:#ffffff; text-decoration:none; font-weight:500;\">\n        Feedback\n    </a>\n\n</div>",
+              "content": "<p><i class=\"pegk pe-7s-call\"></i> <span>(618) 681-5688</span></p>\n<p><i class=\"pegk pe-7s-mail\"></i><span> <a href=\"mailto:mailto:sales@cullenjewellery.com\">contact@company.com</a></span></p>\n<a href=\"#\"><p><i class=\"pegk pe-7s-call\"></i> <span>Appoinment only</span></p></a>",
               "social_mode": "1",
               "order": "1",
-              "cl": "15",
+              "cl": "3",
               "cl_tb": "6",
               "cl_mb": "12"
             }
@@ -632,6 +651,24 @@
       },
       "footer_bot": {
         "type": "footer_bot",
+        "blocks": {
+          "1581507860120": {
+            "type": "copy",
+            "settings": {
+              "text": "Copyright © [year] <span class=\"cp\">Gecko</span> All Rights Reserved. Powered by <a href=\"https://the4.co\">The4</a>"
+            }
+          },
+          "1581507855652": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "1581507860120",
+          "1581507855652"
+        ],
         "settings": {
           "layout": "6",
           "bg": "#222222",
@@ -3219,7 +3256,7 @@
           "height": 62,
           "arrow": false,
           "source": "1",
-          "txt": "",
+          "txt": "Welcome to our store!",
           "social": "2",
           "align": "tc",
           "hover": "hover_side_up"
@@ -3317,7 +3354,7 @@
           "button_label": "Shop Now",
           "button_link": "",
           "open_link": "_blank",
-          "txt_align": "tc",
+          "txt_align": "tl",
           "use_shadow": false,
           "cl_txt": "light",
           "layout": "nt_full",
@@ -3326,17 +3363,6 @@
           "pd": "",
           "mg_mb": "",
           "pd_mb": ""
-        }
-      },
-      "custom-footer": {
-        "type": "custom-footer",
-        "settings": {
-          "bg_color": "#1f6b45",
-          "text_color": "#ffffff",
-          "alignment": "center",
-          "padding_top": 0,
-          "padding_bottom": 0,
-          "payment_types": "amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa"
         }
       }
     },
