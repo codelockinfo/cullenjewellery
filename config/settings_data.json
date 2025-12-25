@@ -3829,7 +3829,7 @@
             "type": "shipping",
             "settings": {
               "icon": "pe-7s-car",
-              "title": "Worldwide",
+              "title": "Worldwide <br>Express Shipping",
               "text": ""
             }
           },
@@ -3837,7 +3837,7 @@
             "type": "shipping",
             "settings": {
               "icon": "pe-7s-help2",
-              "title": "SUPPORT 24/7",
+              "title": "Free <br> Resizing",
               "text": ""
             }
           },
