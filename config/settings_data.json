@@ -3022,7 +3022,7 @@
           "1_a76MqQ": {
             "type": "1",
             "settings": {
-              "title": "Experience Cullen in Person",
+              "title": "Your story, our craft",
               "color": "#ffffff",
               "fw_text": 600,
               "fs_text": 30,
@@ -3044,7 +3044,7 @@
             "type": "2",
             "settings": {
               "font": "f__libre",
-              "title": "View a range of our most popular engagement rings and wedding bands.",
+              "title": "Explore Custom Rings",
               "color": "#ffffff",
               "fw_text": 400,
               "fs_text": 14,
@@ -3058,6 +3058,7 @@
           },
           "6_ftXDii": {
             "type": "6",
+            "disabled": true,
             "settings": {
               "sp": 10,
               "sp_mb": 10
@@ -3065,6 +3066,7 @@
           },
           "3_enqKhB": {
             "type": "3",
+            "disabled": true,
             "settings": {
               "title": "BOOK AN APPOINMENT",
               "btn_link": "https://cullenjewellery.com/visit",
