@@ -3375,10 +3375,29 @@
               "placeholder": "Your email address",
               "button_text": "Submit"
             }
+          },
+          "social_icons_7aDqUe": {
+            "type": "social_icons",
+            "settings": {
+              "icon_1": "FACE",
+              "link_1": "",
+              "icon_2": "",
+              "link_2": "",
+              "icon_3": "",
+              "link_3": ""
+            }
+          },
+          "menu_hGDLwY": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
-          "newsletter_3R6Tzn"
+          "newsletter_3R6Tzn",
+          "social_icons_7aDqUe",
+          "menu_hGDLwY"
         ],
         "settings": {
           "bg_color": "#236339",
