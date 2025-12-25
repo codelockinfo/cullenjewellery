@@ -79,13 +79,6 @@ background:#253e2b;
 padding:20px 0px;
 }
 
-
-/*-----------------------------------------------------------------------------/
-/ Custom Theme CSS
-/-----------------------------------------------------------------------------*/
-/*---------------- Global Custom CSS -------------------*/
-
-/* Reviews Carousel Styles */
 .reviews_carousel_wrapper {
   padding: 60px 0;
   overflow: hidden;
@@ -197,12 +190,25 @@ padding:20px 0px;
 }
 
 .review_rating .star {
-  color: #FFC107;
   font-size: 16px;
   margin-right: 2px;
 }
 
-.review_rating .star:not(.filled) {
+/* Google Reviews - Orange/Yellow Stars */
+.review_rating.rating_platform_google .star.filled {
+  color: #FFA500;
+}
+
+.review_rating.rating_platform_google .star:not(.filled) {
+  color: #E0E0E0;
+}
+
+/* Trustpilot Reviews - Green Stars */
+.review_rating.rating_platform_trustpilot .star.filled {
+  color: #00B67A;
+}
+
+.review_rating.rating_platform_trustpilot .star:not(.filled) {
   color: #E0E0E0;
 }
 
@@ -391,4 +397,5 @@ padding:20px 0px;
     max-width: 31%;
     vertical-align: middle;
 }
+
 </style>
