@@ -3798,6 +3798,7 @@
             "settings": {
               "platform": "google",
               "reviewer_name": "Customer Name",
+              "profile_image": "shopify://shop_images/unnamed_c8c1d01f-e1b9-4a75-8fe5-9d5bfba000cf.png",
               "profile_bg_color": "#4285f4",
               "rating": 5,
               "time_ago": "2 days ago",
