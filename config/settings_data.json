@@ -3442,6 +3442,84 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "collection_list_QtC39m": {
+        "type": "collection-list",
+        "blocks": {
+          "collection_MRYmMX": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Education_-_Engagement_Ring_Advice_500x500_5f5feab5-c351-4bc1-8c68-d3aaa5c1f0d7.webp",
+              "img_align": "center",
+              "title": "Engagement Ring Advice →",
+              "url": ""
+            }
+          },
+          "collection_VqCXYf": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Education_-_Lab_Grown_Diamond_Advice_500x500_99cd2b21-d63a-4ccc-989b-a6606fdd45a0.webp",
+              "img_align": "center",
+              "title": "Lab Grown Diamond Advice →",
+              "url": ""
+            }
+          },
+          "collection_pcrKih": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/our_services_-_moissanite_guidance_1_500x500_0c420d9a-0580-428c-927b-9e2cc143f85f.webp",
+              "img_align": "center",
+              "title": "Moissanite Advice →",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection_MRYmMX",
+          "collection_VqCXYf",
+          "collection_pcrKih"
+        ],
+        "name": "5. Collection list",
+        "settings": {
+          "title": "Education",
+          "sub_title": "We provide industry-leading guidance on fine jewelry and in-depth education for lab grown diamonds and moissanite stones, along with the anatomy of an engagement ring.",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "cat_layout": "1",
+          "hoverz": true,
+          "cat_design": "5",
+          "cat_space": "30",
+          "image_ratio": "ratio_nt",
+          "col": "3",
+          "col_md": "4",
+          "col_mb": "6",
+          "spn_txt": "",
+          "pr_txt": "",
+          "loop": true,
+          "autoplay": true,
+          "au_time": 6,
+          "au_hover": true,
+          "button": false,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "0",
+          "dot": true,
+          "dot_owl": "1",
+          "dot_color": "1",
+          "hidden": false,
+          "cp_code": false,
+          "layout": "wrap",
+          "cl_bg": "",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -3454,7 +3532,8 @@
       "image_text_j3jVmi",
       "collection_list_yDa7AB",
       "image_text_rgUqPg",
-      "collection_list_VNUUBP"
+      "collection_list_VNUUBP",
+      "collection_list_QtC39m"
     ]
   }
 }
