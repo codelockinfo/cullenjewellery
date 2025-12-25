@@ -3643,6 +3643,34 @@
           "faq_qbXAcJ": {
             "type": "faq",
             "settings": {
+              "title": "How does Cullen Jewellery ensure a seamless purchase experience?",
+              "content": "<p>We offer a personalised in-person showroom experience to explore gemstone shapes, carat weight, compare engagement ring designs and purchase our ready-to-wear range. Our collection is also available to shop online, with the option to customise a ring unique to you. We provide comprehensive support, with a specialist guiding you through each step of your engagement ring journey.<br/><br/></p>"
+            }
+          },
+          "faq_HERz9j": {
+            "type": "faq",
+            "settings": {
+              "title": "What type of warranty do I receive?",
+              "content": "<p>Cullen Jewellery offers a Lifetime Manufacturing Warranty on all our rings, including engagement, wedding and fashion rings, giving you confidence and peace of mind with every purchase. For all other finejewelrypieces, such as earrings, chains, pendants, bracelets and more, we provide a 2-Year Manufacturer Warranty.<a href=\"https://cullenjewellery.com/warranty\" title=\"Cullen Jewellery Warranty\">View our full warranty details here</a>.<br/></p>"
+            }
+          },
+          "faq_zA4cUX": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <strong>Add content to this section using the sidebar.</strong></p>"
+            }
+          },
+          "faq_gcM6H6": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <strong>Add content to this section using the sidebar.</strong></p>"
+            }
+          },
+          "faq_MYmqMw": {
+            "type": "faq",
+            "settings": {
               "title": "Question and answer",
               "content": "<p>This section doesn’t currently include any content. <strong>Add content to this section using the sidebar.</strong></p>"
             }
@@ -3654,7 +3682,11 @@
           "faq_d8EiLw",
           "faq_X4DcMm",
           "faq_8fpeHb",
-          "faq_qbXAcJ"
+          "faq_qbXAcJ",
+          "faq_HERz9j",
+          "faq_zA4cUX",
+          "faq_gcM6H6",
+          "faq_MYmqMw"
         ],
         "name": "9. FAQs",
         "settings": {
