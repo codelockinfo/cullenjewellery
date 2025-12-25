@@ -3364,6 +3364,95 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "collection_list_VNUUBP": {
+        "type": "collection-list",
+        "blocks": {
+          "collection_LYw3Ld": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/our_services_-_showrooms_500x500_2e9b1c4f-bd9d-480d-bc39-d29bf22d2e5f.webp",
+              "img_align": "center",
+              "title": "Showrooms →",
+              "url": ""
+            }
+          },
+          "collection_wQ37Bj": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Our_Services_-_Appointments_500x500_1899120f-63c0-407c-8d04-38af7d416e5f.webp",
+              "img_align": "center",
+              "title": "Appointments →",
+              "url": ""
+            }
+          },
+          "collection_kjTgkE": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Our_Services_-_Customised_Rings_500x500_140339b3-8f8f-4aa0-949f-dc7ca2df6fed.webp",
+              "img_align": "center",
+              "title": "Custom Rings →",
+              "url": ""
+            }
+          },
+          "collection_Dth3mH": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": "shopify://shop_images/Our_Services_-_Get_In_Touch_500x500_1240e7c3-73e9-4d40-9782-2078e312f891.webp",
+              "img_align": "center",
+              "title": "Get in touch →",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection_LYw3Ld",
+          "collection_wQ37Bj",
+          "collection_kjTgkE",
+          "collection_Dth3mH"
+        ],
+        "name": "5. Collection list",
+        "settings": {
+          "title": "Our Services",
+          "sub_title": "Receive custom engagement ring guidance from our expert team in person and online.",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "cat_layout": "1",
+          "hoverz": true,
+          "cat_design": "5",
+          "cat_space": "30",
+          "image_ratio": "ratio_nt",
+          "col": "3",
+          "col_md": "4",
+          "col_mb": "6",
+          "spn_txt": "",
+          "pr_txt": "",
+          "loop": true,
+          "autoplay": true,
+          "au_time": 6,
+          "au_hover": true,
+          "button": false,
+          "btn_vi": "1",
+          "btn_owl": "1",
+          "btn_color": "0",
+          "dot": true,
+          "dot_owl": "1",
+          "dot_color": "1",
+          "hidden": false,
+          "cp_code": false,
+          "layout": "wrap",
+          "cl_bg": "",
+          "mg": "50px,,50px,",
+          "pd": "",
+          "mg_mb": "",
+          "pd_mb": ""
+        }
       }
     },
     "content_for_index": [
@@ -3375,7 +3464,8 @@
       "collection_list_6akWFW",
       "image_text_j3jVmi",
       "collection_list_yDa7AB",
-      "image_text_rgUqPg"
+      "image_text_rgUqPg",
+      "collection_list_VNUUBP"
     ]
   }
 }
