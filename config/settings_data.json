@@ -3922,11 +3922,19 @@
               "title": "Trees For The Future",
               "content": "We plant 1 tree for every jewellery purchase through our partnership with Trees For The Future. This initiative focuses on reforestation efforts, particularly in Africa, where significant habitat loss has occurred due to mining. This reinforces our commitment to environmental responsibility and sustainable practices by reducing our carbon footprint."
             }
+          },
+          "accordion_AqJ6rK": {
+            "type": "accordion",
+            "settings": {
+              "title": "Gold Recycling",
+              "content": "Our in-house Precious Metal Recycling Initiative plays an integral part in our commitment to reducing waste and recycling finite resources like gold and platinum. Through this initiative, we diligently collect and reuse precious metals from the crafting process by collecting workshop dust, shavings, and filings. We can then refine the precious metals, allowing us to reuse them in our clients' resizes and repairs."
+            }
           }
         },
         "block_order": [
           "accordion_HNnWUR",
-          "accordion_iqLFWc"
+          "accordion_iqLFWc",
+          "accordion_AqJ6rK"
         ],
         "name": "Careers Split Section",
         "settings": {
