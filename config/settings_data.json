@@ -3828,6 +3828,7 @@
           "shipping_Qbg8Dt": {
             "type": "shipping",
             "settings": {
+              "image": "shopify://shop_images/Screenshot_26_7297d81f-37c5-4cec-8eef-831022f541ce.png",
               "icon": "pe-7s-car",
               "title": "Worldwide <br>Express Shipping",
               "text": ""
@@ -3836,6 +3837,7 @@
           "shipping_6XVF4m": {
             "type": "shipping",
             "settings": {
+              "image": "shopify://shop_images/Screenshot_27_38192ab3-ac6d-4d1c-bfde-5bfb441c323e.png",
               "icon": "pe-7s-help2",
               "title": "Free <br> Resizing",
               "text": ""
@@ -3844,6 +3846,7 @@
           "shipping_EhQwwj": {
             "type": "shipping",
             "settings": {
+              "image": "shopify://shop_images/Screenshot_28_3e55b777-0eeb-48ba-a798-7c587b4cadfc.png",
               "icon": "pe-7s-refresh",
               "title": "Lifetime Ring <br> Warranty",
               "text": ""
@@ -3852,6 +3855,7 @@
           "shipping_CkQLVp": {
             "type": "shipping",
             "settings": {
+              "image": "shopify://shop_images/Screenshot_29_1b78c75d-d0ab-4811-b00f-7132aa4eb431.png",
               "icon": "pe-7s-door-lock",
               "title": "Free Ring <br> Customisation",
               "text": ""
