@@ -585,7 +585,7 @@
               "content": "<p><i class=\"pegk pe-7s-call\"></i> <span>(618) 681-5688</span></p>\n<p><i class=\"pegk pe-7s-mail\"></i><span> <a href=\"mailto:mailto:sales@cullenjewellery.com\">contact@company.com</a></span></p>\n<a href=\"#\"><p><i class=\"pegk pe-7s-call\"></i> <span>Appoinment only</span></p></a><div style=\"color:#ffffff; font-family:Arial, sans-serif; font-size:14px; line-height:1.6;\">\n\n    <div style=\"font-size:15px; font-weight:bold; margin-bottom:8px; text-transform:uppercase;\">\n        CONTACT HOURS\n    </div>\n\n    <div style=\"margin-bottom:4px;\">\n        <strong>MON–WED:</strong> 3:30 AM – 11:30 AM\n    </div>\n\n    <div style=\"margin-bottom:4px;\">\n        <strong>THU–FRI:</strong> 3:30 AM – 1:30 PM\n    </div>\n\n    <div style=\"margin-bottom:8px;\">\n        <strong>SAT:</strong> 2:30 AM – 10:30 AM\n    </div>\n\n    <a href=\"#\" style=\"display:inline-block; color:#ffffff; text-decoration:none; font-weight:500; margin-bottom:4px;\">\n        Get In Touch\n    </a><br>\n\n    <a href=\"#\" style=\"display:inline-block; color:#ffffff; text-decoration:none; font-weight:500;\">\n        Feedback\n    </a>\n\n</div>",
               "social_mode": "1",
               "order": "1",
-              "cl": "3",
+              "cl": "15",
               "cl_tb": "6",
               "cl_mb": "12"
             }
