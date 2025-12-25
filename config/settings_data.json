@@ -430,35 +430,16 @@
           "text2_Ck9mF9": {
             "type": "text2",
             "settings": {
-              "text": "<p>Welcome customers to your store.</p>",
+              "text": "",
               "effect": "1",
               "au_time": 3.5,
               "hide": false,
               "col": "4"
             }
-          },
-          "1595994733101": {
-            "type": "social",
-            "settings": {
-              "social": "2",
-              "border_bl": true,
-              "black_bl": false,
-              "hide": true,
-              "col": "4"
-            }
-          },
-          "header_top-2": {
-            "type": "cur",
-            "settings": {
-              "hide": true,
-              "col": "4"
-            }
           }
         },
         "block_order": [
-          "text2_Ck9mF9",
-          "1595994733101",
-          "header_top-2"
+          "text2_Ck9mF9"
         ],
         "settings": {
           "height": 50,
@@ -651,24 +632,6 @@
       },
       "footer_bot": {
         "type": "footer_bot",
-        "blocks": {
-          "1581507860120": {
-            "type": "copy",
-            "settings": {
-              "text": "Copyright © [year] <span class=\"cp\">Gecko</span> All Rights Reserved. Powered by <a href=\"https://the4.co\">The4</a>"
-            }
-          },
-          "1581507855652": {
-            "type": "menu",
-            "settings": {
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "1581507860120",
-          "1581507855652"
-        ],
         "settings": {
           "layout": "6",
           "bg": "#222222",
@@ -3256,7 +3219,7 @@
           "height": 62,
           "arrow": false,
           "source": "1",
-          "txt": "Welcome to our store!",
+          "txt": "",
           "social": "2",
           "align": "tc",
           "hover": "hover_side_up"
@@ -3367,43 +3330,11 @@
       },
       "custom-footer": {
         "type": "custom-footer",
-        "blocks": {
-          "newsletter_3R6Tzn": {
-            "type": "newsletter",
-            "settings": {
-              "heading": "Ring advice, straight to your inbox",
-              "placeholder": "Your email address",
-              "button_text": "Submit"
-            }
-          },
-          "social_icons_7aDqUe": {
-            "type": "social_icons",
-            "settings": {
-              "icon_1": "FACE",
-              "link_1": "",
-              "icon_2": "",
-              "link_2": "",
-              "icon_3": "",
-              "link_3": ""
-            }
-          },
-          "menu_hGDLwY": {
-            "type": "menu",
-            "settings": {
-              "menu": "footer"
-            }
-          }
-        },
-        "block_order": [
-          "newsletter_3R6Tzn",
-          "social_icons_7aDqUe",
-          "menu_hGDLwY"
-        ],
         "settings": {
-          "bg_color": "#236339",
+          "bg_color": "#1f6b45",
           "text_color": "#ffffff",
           "alignment": "center",
-          "padding_top": 16,
+          "padding_top": 0,
           "padding_bottom": 0,
           "payment_types": "amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa"
         }
