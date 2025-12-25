@@ -3068,7 +3068,7 @@
           "content_position": "middle-center",
           "cap_v_pos": 51,
           "cap_h_pos": 57,
-          "txt_align": "tl",
+          "txt_align": "tc",
           "use_shadow": false,
           "cl_overlay": "#000",
           "cl_opacity": 0,
