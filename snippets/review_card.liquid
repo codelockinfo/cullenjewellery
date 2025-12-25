@@ -14,11 +14,11 @@
   <div class="review_card_header">
     {%- if platform == 'google' -%}
       <div class="platform_logo platform_google">
-        <img loading="lazy" class="logo svelte-n6w3rd" src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google logo">
+        <img loading="lazy" class="logo" src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google logo">
       </div>
     {%- elsif platform == 'trustpilot' -%}
       <div class="platform_logo platform_trustpilot">
-        <img loading="lazy" class="logo svelte-n6w3rd" src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Trustpilot_brandmark_center_x100.png?v=1703209158" alt="Trustpilot">
+        <img loading="lazy" class="logo" src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Trustpilot_brandmark_center_x100.png?v=1703209158" alt="Trustpilot">
       </div>
     {%- endif -%}
   </div>
@@ -36,7 +36,7 @@
       </div>
       <div class="reviewer_details">
         <div class="reviewer_name">{{ reviewer_name }}</div>
-        <div class="review_rating">
+        <div class="review_rating rating_platform_{{ platform }}">
           {%- for i in (1..5) -%}
             {%- if i <= rating -%}
               <span class="star filled">★</span>
