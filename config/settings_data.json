@@ -430,10 +430,20 @@
           "text2_Ck9mF9": {
             "type": "text2",
             "settings": {
-              "text": "<p>San Diego Showroom Opening Soon!</p>",
-              "effect": "0",
+              "text": "<p>Welcome customers to your store.</p>",
+              "effect": "1",
               "au_time": 3.5,
               "hide": false,
+              "col": "4"
+            }
+          },
+          "1595994733101": {
+            "type": "social",
+            "settings": {
+              "social": "2",
+              "border_bl": true,
+              "black_bl": false,
+              "hide": true,
               "col": "4"
             }
           },
@@ -447,6 +457,7 @@
         },
         "block_order": [
           "text2_Ck9mF9",
+          "1595994733101",
           "header_top-2"
         ],
         "settings": {
@@ -455,7 +466,7 @@
           "cl": "#ffffff",
           "cl_a": "#222222",
           "cl_cr": "#b59677",
-          "bg": "#236339",
+          "bg": "#3e3e3e",
           "bg_op": 100,
           "show_border": false,
           "bd_cl": "#000000",
@@ -2784,8 +2795,8 @@
           "txt_align": "tc",
           "use_shadow": false,
           "cl_txt": "light",
-          "layout": "container",
-          "cl_bg": "rgba(0,0,0,0)",
+          "layout": "nt_full",
+          "cl_bg": "#253e2b",
           "mg": "50px,,50px,",
           "pd": "",
           "mg_mb": "",
@@ -3234,10 +3245,10 @@
           "dropdown_MEmfi4"
         ],
         "settings": {
-          "height": 84,
+          "height": 62,
           "arrow": false,
           "source": "1",
-          "txt": "",
+          "txt": "Welcome to our store!",
           "social": "2",
           "align": "tc",
           "hover": "hover_side_up"
