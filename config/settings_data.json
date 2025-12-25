@@ -3601,6 +3601,94 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "faq_t4XKDD": {
+        "type": "faq",
+        "blocks": {
+          "faq_Geg6xy": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <strong>Add content to this section using the sidebar.</strong></p>"
+            }
+          },
+          "faq_8eh8EU": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <strong>Add content to this section using the sidebar.</strong></p>"
+            }
+          },
+          "faq_d8EiLw": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <b>Add content to this section using the sidebar.</b></p>"
+            }
+          },
+          "faq_X4DcMm": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <b>Add content to this section using the sidebar.</b></p>"
+            }
+          },
+          "faq_8fpeHb": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <b>Add content to this section using the sidebar.</b></p>"
+            }
+          },
+          "faq_qbXAcJ": {
+            "type": "faq",
+            "settings": {
+              "title": "Question and answer",
+              "content": "<p>This section doesn’t currently include any content. <b>Add content to this section using the sidebar.</b></p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_Geg6xy",
+          "faq_8eh8EU",
+          "faq_d8EiLw",
+          "faq_X4DcMm",
+          "faq_8fpeHb",
+          "faq_qbXAcJ"
+        ],
+        "name": "9. FAQs",
+        "settings": {
+          "title": "FAQ",
+          "sub_title": "Your questions, answered.",
+          "sub_font": "2",
+          "style_title": "title_1",
+          "ic_tt": "gem",
+          "show_clpr": false,
+          "faq_des": "2",
+          "active_first": true,
+          "use_pr": false,
+          "layout": "nt_boxed",
+          "cl_bg": "#f5f5f5",
+          "cl_overlay": "#000",
+          "cl_opacity": 0,
+          "section_bg_color": "#ffffff",
+          "tt_cl": "#fff",
+          "hd_bg": "#ffffff",
+          "hd_cl": "#222",
+          "hd_bg_atc": "#8e672f",
+          "hd_cl_atc": "#fff",
+          "btn_bg": "#8e672f",
+          "btn_cl": "#fff",
+          "btn_bg_atc": "#fff",
+          "btn_cl_atc": "#8e672f",
+          "ct_bg": "#fff",
+          "ct_cl": "#222",
+          "bd_cl": "#f5f5f5",
+          "mg": "",
+          "pd": "100px,,100px,",
+          "mg_mb": "",
+          "pd_mb": "50px,,50px,"
+        }
       }
     },
     "content_for_index": [
@@ -3615,7 +3703,8 @@
       "image_text_rgUqPg",
       "collection_list_VNUUBP",
       "collection_list_QtC39m",
-      "instagram_feed_MaktJX"
+      "instagram_feed_MaktJX",
+      "faq_t4XKDD"
     ]
   }
 }
