@@ -3364,6 +3364,30 @@
           "mg_mb": "",
           "pd_mb": ""
         }
+      },
+      "custom-footer": {
+        "type": "custom-footer",
+        "blocks": {
+          "newsletter_3R6Tzn": {
+            "type": "newsletter",
+            "settings": {
+              "heading": "Ring advice, straight to your inbox",
+              "placeholder": "Your email address",
+              "button_text": "Submit"
+            }
+          }
+        },
+        "block_order": [
+          "newsletter_3R6Tzn"
+        ],
+        "settings": {
+          "bg_color": "#236339",
+          "text_color": "#ffffff",
+          "alignment": "center",
+          "padding_top": 16,
+          "padding_bottom": 0,
+          "payment_types": "amazon_payments,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa"
+        }
       }
     },
     "content_for_index": [
