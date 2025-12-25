@@ -36,16 +36,18 @@
       </div>
       <div class="reviewer_details">
         <div class="reviewer_name">{{ reviewer_name }}</div>
-        <div class="review_rating rating_platform_{{ platform }}">
-          {%- for i in (1..5) -%}
-            {%- if i <= rating -%}
-              <span class="star filled">★</span>
-            {%- else -%}
-              <span class="star">★</span>
-            {%- endif -%}
-          {%- endfor -%}
+        <div>
+          <div class="review_rating rating_platform_{{ platform }}">
+            {%- for i in (1..5) -%}
+              {%- if i <= rating -%}
+                <span class="star filled">★</span>
+              {%- else -%}
+                <span class="star">★</span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          <div class="review_time">{{ time_ago }}</div>
         </div>
-        <div class="review_time">{{ time_ago }}</div>
       </div>
     </div>
     
