@@ -3951,6 +3951,66 @@
           "right_heading": "Initiatives",
           "right_text": ""
         }
+      },
+      "announcement_bar": {
+        "type": "announcement_bar",
+        "blocks": {
+          "announcement_bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Free shipping on orders over $50!</p>",
+              "link": "",
+              "open_link": "_self"
+            }
+          },
+          "announcement_bar-1": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Austin Coming Soon!!</p>",
+              "link": "",
+              "open_link": "_self"
+            }
+          },
+          "announcement_bar-2": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Why We Don’t Go On Sale</p>",
+              "link": "",
+              "open_link": "_self"
+            }
+          }
+        },
+        "block_order": [
+          "announcement_bar-0",
+          "announcement_bar-1",
+          "announcement_bar-2"
+        ],
+        "settings": {
+          "layout": "nt_full",
+          "loop": true,
+          "autoplay": true,
+          "au_time": 5,
+          "au_hover": true,
+          "effect": "1",
+          "bg_color": "#236339",
+          "text_color": "#ffffff",
+          "height": 40,
+          "height_mobile": 36,
+          "padding_top": 10,
+          "padding_bottom": 10,
+          "padding_top_mobile": 8,
+          "padding_bottom_mobile": 8,
+          "font_size": 13,
+          "font_size_mobile": 12,
+          "font_weight": "500",
+          "image_width": 24,
+          "image_height": 24,
+          "image_width_mobile": 20,
+          "image_height_mobile": 20,
+          "show_border": false,
+          "border_color": "#e5e5e5",
+          "show_close": true
+        }
       }
     },
     "content_for_index": [
