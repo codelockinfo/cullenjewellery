@@ -107,7 +107,7 @@
           </div>
           
           {%- comment -%} Text Content Overlay {%- endcomment -%}
-          <div class="txt_content pa t__0 l__0 b__0 r__0 flex column shadow_wrap {{bk_stts.txt_align}} pe_none z__100">
+          <div class="txt_content pa t__0 l__0 b__0 r__0 flex column shadow_wrap {{bk_stts.txt_align}} {{bk_stts.banner_align}} pe_none z__100">
             <div class="pa pa_txts mb_h_pos{{bk_stts.cap_h_pos}} mb_v_pos{{bk_stts.cap_v_pos}} h_pos{{bk_stts.cap_h_pos}} v_pos{{bk_stts.cap_v_pos}}">
               {%- if bk_stts.heading != blank -%}
                 <h3 id="heading_{{block.id}}" class="mt__0 mg__0 mb__10 lh__1">{{bk_stts.heading}}</h3>
@@ -250,90 +250,12 @@
     {%- endif -%}
     
     {%- comment -%} Content Position Styles {%- endcomment -%}
-    {%- comment -%} Desktop Position {%- endcomment -%}
-    {%- assign content_pos_desktop = bk_stts.content_position_desktop | default: 'middle_center' -%}
-    {%- case content_pos_desktop -%}
-      {%- when 'top_left' -%}
-        {%- assign cap_h_desktop = 0 -%}
-        {%- assign cap_v_desktop = 0 -%}
-      {%- when 'top_center' -%}
-        {%- assign cap_h_desktop = 50 -%}
-        {%- assign cap_v_desktop = 0 -%}
-      {%- when 'top_right' -%}
-        {%- assign cap_h_desktop = 100 -%}
-        {%- assign cap_v_desktop = 0 -%}
-      {%- when 'middle_left' -%}
-        {%- assign cap_h_desktop = 0 -%}
-        {%- assign cap_v_desktop = 50 -%}
-      {%- when 'middle_center' -%}
-        {%- assign cap_h_desktop = 50 -%}
-        {%- assign cap_v_desktop = 50 -%}
-      {%- when 'middle_right' -%}
-        {%- assign cap_h_desktop = 100 -%}
-        {%- assign cap_v_desktop = 50 -%}
-      {%- when 'bottom_left' -%}
-        {%- assign cap_h_desktop = 0 -%}
-        {%- assign cap_v_desktop = 100 -%}
-      {%- when 'bottom_center' -%}
-        {%- assign cap_h_desktop = 50 -%}
-        {%- assign cap_v_desktop = 100 -%}
-      {%- when 'bottom_right' -%}
-        {%- assign cap_h_desktop = 100 -%}
-        {%- assign cap_v_desktop = 100 -%}
-      {%- else -%}
-        {%- assign cap_h_desktop = 50 -%}
-        {%- assign cap_v_desktop = 50 -%}
-    {%- endcase -%}
-    
-    {%- comment -%} Mobile Position {%- endcomment -%}
-    {%- assign content_pos_mobile = bk_stts.content_position_mobile | default: 'middle_center' -%}
-    {%- case content_pos_mobile -%}
-      {%- when 'top_left' -%}
-        {%- assign cap_h_mobile = 0 -%}
-        {%- assign cap_v_mobile = 0 -%}
-      {%- when 'top_center' -%}
-        {%- assign cap_h_mobile = 50 -%}
-        {%- assign cap_v_mobile = 0 -%}
-      {%- when 'top_right' -%}
-        {%- assign cap_h_mobile = 100 -%}
-        {%- assign cap_v_mobile = 0 -%}
-      {%- when 'middle_left' -%}
-        {%- assign cap_h_mobile = 0 -%}
-        {%- assign cap_v_mobile = 50 -%}
-      {%- when 'middle_center' -%}
-        {%- assign cap_h_mobile = 50 -%}
-        {%- assign cap_v_mobile = 50 -%}
-      {%- when 'middle_right' -%}
-        {%- assign cap_h_mobile = 100 -%}
-        {%- assign cap_v_mobile = 50 -%}
-      {%- when 'bottom_left' -%}
-        {%- assign cap_h_mobile = 0 -%}
-        {%- assign cap_v_mobile = 100 -%}
-      {%- when 'bottom_center' -%}
-        {%- assign cap_h_mobile = 50 -%}
-        {%- assign cap_v_mobile = 100 -%}
-      {%- when 'bottom_right' -%}
-        {%- assign cap_h_mobile = 100 -%}
-        {%- assign cap_v_mobile = 100 -%}
-      {%- else -%}
-        {%- assign cap_h_mobile = 50 -%}
-        {%- assign cap_v_mobile = 50 -%}
-    {%- endcase -%}
-    
-    {%- comment -%} Mobile Styles {%- endcomment -%}
+    {%- assign cap_h = bk_stts.cap_h_pos | default: 50 -%}
+    {%- assign cap_v = bk_stts.cap_v_pos | default: 50 -%}
     .nt_se_{{sid}} .bk_{{bid}} .pa_txts {
-      left: {{cap_h_mobile}}%;
-      top: {{cap_v_mobile}}%;
-      transform: translate(-{{cap_h_mobile}}%, -{{cap_v_mobile}}%);
-    }
-    
-    {%- comment -%} Desktop Styles {%- endcomment -%}
-    @media (min-width: 768px) {
-      .nt_se_{{sid}} .bk_{{bid}} .pa_txts {
-        left: {{cap_h_desktop}}%;
-        top: {{cap_v_desktop}}%;
-        transform: translate(-{{cap_h_desktop}}%, -{{cap_v_desktop}}%);
-      }
+      left: {{cap_h}}%;
+      top: {{cap_v}}%;
+      transform: translate(-{{cap_h}}%, -{{cap_v}}%);
     }
     
     {%- comment -%} Hide desktop image on mobile and vice versa {%- endcomment -%}
@@ -867,91 +789,43 @@
         },
         {
           "type": "select",
-          "id": "content_position_desktop",
-          "label": "Content position (Desktop)",
-          "default": "middle_center",
+          "id": "banner_align",
+          "default": "fl_center",
           "options": [
             {
-              "value": "top_left",
-              "label": "Top left"
+              "value": "fl_left",
+              "label": "Top"
             },
             {
-              "value": "top_center",
-              "label": "Top center"
+              "value": "fl_center",
+              "label": "Middle"
             },
             {
-              "value": "top_right",
-              "label": "Top right"
-            },
-            {
-              "value": "middle_left",
-              "label": "Middle left"
-            },
-            {
-              "value": "middle_center",
-              "label": "Middle center"
-            },
-            {
-              "value": "middle_right",
-              "label": "Middle right"
-            },
-            {
-              "value": "bottom_left",
-              "label": "Bottom left"
-            },
-            {
-              "value": "bottom_center",
-              "label": "Bottom center"
-            },
-            {
-              "value": "bottom_right",
-              "label": "Bottom right"
+              "value": "fl_right",
+              "label": "Bottom"
             }
-          ]
+          ],
+          "label": "Banner alignment"
         },
         {
-          "type": "select",
-          "id": "content_position_mobile",
-          "label": "Content position (Mobile)",
-          "default": "middle_center",
-          "options": [
-            {
-              "value": "top_left",
-              "label": "Top left"
-            },
-            {
-              "value": "top_center",
-              "label": "Top center"
-            },
-            {
-              "value": "top_right",
-              "label": "Top right"
-            },
-            {
-              "value": "middle_left",
-              "label": "Middle left"
-            },
-            {
-              "value": "middle_center",
-              "label": "Middle center"
-            },
-            {
-              "value": "middle_right",
-              "label": "Middle right"
-            },
-            {
-              "value": "bottom_left",
-              "label": "Bottom left"
-            },
-            {
-              "value": "bottom_center",
-              "label": "Bottom center"
-            },
-            {
-              "value": "bottom_right",
-              "label": "Bottom right"
-            }
-          ]
+          "type": "range",
+          "id": "cap_v_pos",
+          "label": "Content vertical position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_h_pos",
+          "label": "Content horizontal position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
         }
       ]
     },
@@ -1313,91 +1187,43 @@
         },
         {
           "type": "select",
-          "id": "content_position_desktop",
-          "label": "Content position (Desktop)",
-          "default": "middle_center",
+          "id": "banner_align",
+          "default": "fl_center",
           "options": [
             {
-              "value": "top_left",
-              "label": "Top left"
+              "value": "fl_left",
+              "label": "Top"
             },
             {
-              "value": "top_center",
-              "label": "Top center"
+              "value": "fl_center",
+              "label": "Middle"
             },
             {
-              "value": "top_right",
-              "label": "Top right"
-            },
-            {
-              "value": "middle_left",
-              "label": "Middle left"
-            },
-            {
-              "value": "middle_center",
-              "label": "Middle center"
-            },
-            {
-              "value": "middle_right",
-              "label": "Middle right"
-            },
-            {
-              "value": "bottom_left",
-              "label": "Bottom left"
-            },
-            {
-              "value": "bottom_center",
-              "label": "Bottom center"
-            },
-            {
-              "value": "bottom_right",
-              "label": "Bottom right"
+              "value": "fl_right",
+              "label": "Bottom"
             }
-          ]
+          ],
+          "label": "Banner alignment"
         },
         {
-          "type": "select",
-          "id": "content_position_mobile",
-          "label": "Content position (Mobile)",
-          "default": "middle_center",
-          "options": [
-            {
-              "value": "top_left",
-              "label": "Top left"
-            },
-            {
-              "value": "top_center",
-              "label": "Top center"
-            },
-            {
-              "value": "top_right",
-              "label": "Top right"
-            },
-            {
-              "value": "middle_left",
-              "label": "Middle left"
-            },
-            {
-              "value": "middle_center",
-              "label": "Middle center"
-            },
-            {
-              "value": "middle_right",
-              "label": "Middle right"
-            },
-            {
-              "value": "bottom_left",
-              "label": "Bottom left"
-            },
-            {
-              "value": "bottom_center",
-              "label": "Bottom center"
-            },
-            {
-              "value": "bottom_right",
-              "label": "Bottom right"
-            }
-          ]
+          "type": "range",
+          "id": "cap_v_pos",
+          "label": "Content vertical position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_h_pos",
+          "label": "Content horizontal position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
         }
       ]
     }
