@@ -2813,12 +2813,12 @@
               "heading": "Heirloom in the Making",
               "heading_color": "#ffffff",
               "heading_size": 45,
-              "heading_size_mb": 40,
+              "heading_size_mb": 20,
               "heading_weight": 600,
               "subheading": "A handcrafted piece whose story begins with you.",
               "subheading_color": "#ffffff",
               "subheading_size": 17,
-              "subheading_size_mb": 16,
+              "subheading_size_mb": 13,
               "subheading_weight": 400,
               "button_label": "EXPLORE BEZELS",
               "button_url": "https://cullenjewellery.com/bezels-future-heirlooms",
@@ -2836,7 +2836,9 @@
               "txt_align": "tl",
               "banner_align": "fl_center",
               "cap_v_pos": 81,
-              "cap_h_pos": 30
+              "cap_h_pos": 30,
+              "cap_v_pos_mb": 50,
+              "cap_h_pos_mb": 50
             }
           },
           "video_jkRB4H": {
@@ -2875,7 +2877,9 @@
               "txt_align": "tc",
               "banner_align": "fl_center",
               "cap_v_pos": 50,
-              "cap_h_pos": 50
+              "cap_h_pos": 50,
+              "cap_v_pos_mb": 50,
+              "cap_h_pos_mb": 50
             }
           }
         },
