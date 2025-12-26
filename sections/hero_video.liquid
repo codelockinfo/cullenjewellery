@@ -6,76 +6,11 @@
   assign source = se_stts.source
   assign image = se_stts.image
   
-  
-  if se_stts.content_position != blank and se_stts.content_position != 'custom'
-    case se_stts.content_position
-      when 'top-left'
-        assign cap_h_pos = 0
-        assign cap_v_pos = 0
-      when 'top-center'
-        assign cap_h_pos = 50
-        assign cap_v_pos = 0
-      when 'top-right'
-        assign cap_h_pos = 100
-        assign cap_v_pos = 0
-      when 'middle-left'
-        assign cap_h_pos = 0
-        assign cap_v_pos = 50
-      when 'middle-center'
-        assign cap_h_pos = 50
-        assign cap_v_pos = 50
-      when 'middle-right'
-        assign cap_h_pos = 100
-        assign cap_v_pos = 50
-      when 'bottom-left'
-        assign cap_h_pos = 0
-        assign cap_v_pos = 100
-      when 'bottom-center'
-        assign cap_h_pos = 50
-        assign cap_v_pos = 100
-      when 'bottom-right'
-        assign cap_h_pos = 100
-        assign cap_v_pos = 100
-    endcase
-  else
-    assign cap_h_pos = se_stts.cap_h_pos
-    assign cap_v_pos = se_stts.cap_v_pos
-  endif
-  
-  if se_stts.content_position_mb != blank and se_stts.content_position_mb != 'custom'
-    case se_stts.content_position_mb
-      when 'top-left'
-        assign cap_h_pos_mb = 0
-        assign cap_v_pos_mb = 0
-      when 'top-center'
-        assign cap_h_pos_mb = 50
-        assign cap_v_pos_mb = 0
-      when 'top-right'
-        assign cap_h_pos_mb = 100
-        assign cap_v_pos_mb = 0
-      when 'middle-left'
-        assign cap_h_pos_mb = 0
-        assign cap_v_pos_mb = 50
-      when 'middle-center'
-        assign cap_h_pos_mb = 50
-        assign cap_v_pos_mb = 50
-      when 'middle-right'
-        assign cap_h_pos_mb = 100
-        assign cap_v_pos_mb = 50
-      when 'bottom-left'
-        assign cap_h_pos_mb = 0
-        assign cap_v_pos_mb = 100
-      when 'bottom-center'
-        assign cap_h_pos_mb = 50
-        assign cap_v_pos_mb = 100
-      when 'bottom-right'
-        assign cap_h_pos_mb = 100
-        assign cap_v_pos_mb = 100
-    endcase
-  else
-    assign cap_h_pos_mb = se_stts.cap_h_pos_mb | default: se_stts.cap_h_pos
-    assign cap_v_pos_mb = se_stts.cap_v_pos_mb | default: se_stts.cap_v_pos
-  endif -%}
+  assign cap_h_pos = se_stts.cap_h_pos | default: 50 | round
+  assign cap_v_pos = se_stts.cap_v_pos | default: 50 | round
+  assign cap_h_pos_mb = se_stts.cap_h_pos_mb | default: 50 | round
+  assign cap_v_pos_mb = se_stts.cap_v_pos_mb | default: 50 | round
+-%}
 
 <div class="hero_video_se nt_se_{{sid}} {{se_stts.layout}} txt_shadow_{{se_stts.use_shadow}} se_height_{{se_height}} nt_first{% if source == '1' %} video_loading js_video{% endif %}" data-id="{{ video_url.id }}">
   <div class="row">
@@ -327,59 +262,14 @@
         "label": "Caption Width"
       },
       {
-        "type": "select",
-        "id": "content_position",
-        "label": "Content position (Desktop)",
-        "default": "custom",
-        "info": "Choose a preset position or select 'Custom' to use range sliders below",
-        "options": [
-          {
-            "value": "top-left",
-            "label": "Top Left"
-          },
-          {
-            "value": "top-center",
-            "label": "Top Center"
-          },
-          {
-            "value": "top-right",
-            "label": "Top Right"
-          },
-          {
-            "value": "middle-left",
-            "label": "Middle Left"
-          },
-          {
-            "value": "middle-center",
-            "label": "Middle Center"
-          },
-          {
-            "value": "middle-right",
-            "label": "Middle Right"
-          },
-          {
-            "value": "bottom-left",
-            "label": "Bottom Left"
-          },
-          {
-            "value": "bottom-center",
-            "label": "Bottom Center"
-          },
-          {
-            "value": "bottom-right",
-            "label": "Bottom Right"
-          },
-          {
-            "value": "custom",
-            "label": "Custom (use sliders below)"
-          }
-        ]
+        "type": "header",
+        "content": "== Content Position"
       },
       {
          "type": "range",
          "id": "cap_v_pos",
-         "label": "Caption vertical position (Custom - Desktop)",
-         "info":" <= 50: Top position , > 50 bottom position. Only used when 'Custom' is selected above",
+         "label": "Content vertical position (Desktop)",
+         "info":" <= 50: Top position , > 50 bottom position",
          "default": 50,
          "min": 0,
          "max": 100,
@@ -389,8 +279,8 @@
       {
          "type": "range",
          "id": "cap_h_pos",
-         "label": "Caption horizontal position (Custom - Desktop)",
-         "info":" <= 50: Left position , > 50 right position. Only used when 'Custom' is selected above",
+         "label": "Content horizontal position (Desktop)",
+         "info":" <= 50: Left position , > 50 right position",
          "default": 50,
          "min": 0,
          "max": 100,
@@ -403,62 +293,13 @@
       },
       {
         "type": "header",
-        "content": "== Mobile Content Position"
-      },
-      {
-        "type": "select",
-        "id": "content_position_mb",
-        "label": "Content position (Mobile)",
-        "default": "custom",
-        "info": "Choose a preset position or select 'Custom' to use range sliders below",
-        "options": [
-          {
-            "value": "top-left",
-            "label": "Top Left"
-          },
-          {
-            "value": "top-center",
-            "label": "Top Center"
-          },
-          {
-            "value": "top-right",
-            "label": "Top Right"
-          },
-          {
-            "value": "middle-left",
-            "label": "Middle Left"
-          },
-          {
-            "value": "middle-center",
-            "label": "Middle Center"
-          },
-          {
-            "value": "middle-right",
-            "label": "Middle Right"
-          },
-          {
-            "value": "bottom-left",
-            "label": "Bottom Left"
-          },
-          {
-            "value": "bottom-center",
-            "label": "Bottom Center"
-          },
-          {
-            "value": "bottom-right",
-            "label": "Bottom Right"
-          },
-          {
-            "value": "custom",
-            "label": "Custom (use sliders below)"
-          }
-        ]
+        "content": "== Content Position (Mobile)"
       },
       {
          "type": "range",
          "id": "cap_v_pos_mb",
-         "label": "Caption vertical position (Custom - Mobile)",
-         "info":" <= 50: Top position , > 50 bottom position. Only used when 'Custom' is selected above",
+         "label": "Content vertical position (Mobile)",
+         "info":" <= 50: Top position , > 50 bottom position",
          "default": 50,
          "min": 0,
          "max": 100,
@@ -468,8 +309,8 @@
       {
          "type": "range",
          "id": "cap_h_pos_mb",
-         "label": "Caption horizontal position (Custom - Mobile)",
-         "info":" <= 50: Left position , > 50 right position. Only used when 'Custom' is selected above",
+         "label": "Content horizontal position (Mobile)",
+         "info":" <= 50: Left position , > 50 right position",
          "default": 50,
          "min": 0,
          "max": 100,
