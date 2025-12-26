@@ -29,8 +29,16 @@
         {%- assign bk_stts = block.settings -%}
         <div class="announcement-bar-item col-12" {{ block.shopify_attributes }}>
           <div class="announcement-bar-content">
-            {%- if bk_stts.icon != blank -%}
-              <span class="announcement-bar-icon">{{ bk_stts.icon }}</span>
+            {%- if bk_stts.image != blank -%}
+              <div class="announcement-bar-image">
+                {%- if bk_stts.link != blank -%}
+                  <a href="{{ bk_stts.link }}" class="announcement-bar-image-link" target="{{ bk_stts.open_link }}">
+                    <img src="{{ bk_stts.image | img_url: '80x' }}" alt="{{ bk_stts.image.alt | default: bk_stts.text | strip_html | escape }}" loading="lazy">
+                  </a>
+                {%- else -%}
+                  <img src="{{ bk_stts.image | img_url: '80x' }}" alt="{{ bk_stts.image.alt | default: bk_stts.text | strip_html | escape }}" loading="lazy">
+                {%- endif -%}
+              </div>
             {%- endif -%}
             {%- if bk_stts.text != blank -%}
               <div class="announcement-bar-text">
@@ -97,10 +105,22 @@
     line-height: 1.4;
   }
   
-  .announcement-bar-icon {
+  .announcement-bar-image {
     display: inline-flex;
     align-items: center;
-    font-size: {{ se_stts.icon_size }}px;
+    flex-shrink: 0;
+  }
+  
+  .announcement-bar-image img {
+    max-width: {{ se_stts.image_width }}px;
+    max-height: {{ se_stts.image_height }}px;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+  
+  .announcement-bar-image-link {
+    display: inline-block;
   }
   
   .announcement-bar-text {
@@ -154,8 +174,9 @@
       font-size: {{ se_stts.font_size_mobile }}px;
     }
     
-    .announcement-bar-icon {
-      font-size: {{ se_stts.icon_size_mobile }}px;
+    .announcement-bar-image img {
+      max-width: {{ se_stts.image_width_mobile }}px;
+      max-height: {{ se_stts.image_height_mobile }}px;
     }
     
     .announcement-bar-item {
@@ -393,23 +414,43 @@
     },
     {
       "type": "range",
-      "id": "icon_size",
-      "min": 12,
-      "max": 24,
-      "step": 1,
-      "label": "Icon Size (Desktop)",
+      "id": "image_width",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "label": "Image Max Width (Desktop)",
       "unit": "px",
-      "default": 16
+      "default": 24
     },
     {
       "type": "range",
-      "id": "icon_size_mobile",
-      "min": 12,
-      "max": 20,
-      "step": 1,
-      "label": "Icon Size (Mobile)",
+      "id": "image_height",
+      "min": 16,
+      "max": 100,
+      "step": 2,
+      "label": "Image Max Height (Desktop)",
       "unit": "px",
-      "default": 14
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "image_width_mobile",
+      "min": 14,
+      "max": 60,
+      "step": 2,
+      "label": "Image Max Width (Mobile)",
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "min": 14,
+      "max": 60,
+      "step": 2,
+      "label": "Image Max Height (Mobile)",
+      "unit": "px",
+      "default": 20
     },
     {
       "type": "checkbox",
@@ -440,11 +481,10 @@
       "name": "Announcement",
       "settings": [
         {
-          "type": "text",
-          "id": "icon",
-          "label": "Icon (HTML/Emoji)",
-          "info": "You can use HTML icons or emojis. Example: <i class='pegk pe-7s-bell'></i> or 🔔",
-          "default": "🔔"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Select an image to display with the announcement"
         },
         {
           "type": "richtext",
@@ -482,21 +522,18 @@
       {
         "type": "announcement",
         "settings": {
-          "icon": "🚚",
           "text": "<p>Free shipping on orders over $50!</p>"
         }
       },
       {
         "type": "announcement",
         "settings": {
-          "icon": "🎁",
           "text": "<p>New collection available now!</p>"
         }
       },
       {
         "type": "announcement",
         "settings": {
-          "icon": "⭐",
           "text": "<p>Sign up and get 10% off your first order</p>"
         }
       }
