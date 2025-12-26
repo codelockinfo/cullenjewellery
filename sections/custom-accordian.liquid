@@ -42,18 +42,57 @@
         <div class="custom-right-text">{{ section.settings.right_text }}</div>
       {% endif %}
 
-      <div class="careers-accordion">
+      <!-- Desktop Accordion -->
+      <div class="careers-accordion desktop-accordion">
         {% for block in section.blocks %}
-          <div class="accordion-item">
+          <div 
+            class="accordion-item" 
+            data-image="{% if block.settings.accordion_image != blank %}{{ block.settings.accordion_image | img_url: 'master' }}{% endif %}"
+            data-mobile-image="{% if block.settings.accordion_mobile_image != blank %}{{ block.settings.accordion_mobile_image | img_url: 'master' }}{% endif %}"
+          >
             <button class="accordion-title">
               {{ block.settings.title }}
-              <span>+</span>
+              <span class="accordion-icon">
+                <svg viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m2.117 5.292 6.35 6.35 6.35-6.35" class="stroke" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 1.05831; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: none; stroke-opacity: 1;"></path>
+                </svg>
+              </span>
             </button>
             <div class="accordion-content">
               {{ block.settings.content }}
             </div>
           </div>
         {% endfor %}
+      </div>
+
+      <!-- Mobile Coverflow Slider -->
+      <div class="mobile-coverflow-container">
+        <div class="coverflow-wrapper">
+          {% for block in section.blocks %}
+            <div class="coverflow-slide" data-index="{{ forloop.index0 }}">
+              <div class="coverflow-card">
+                <div class="coverflow-image-wrapper">
+                  {% if block.settings.accordion_mobile_image != blank %}
+                    <img src="{{ block.settings.accordion_mobile_image | img_url: 'master' }}" alt="{{ block.settings.title }}" class="coverflow-image">
+                  {% elsif block.settings.accordion_image != blank %}
+                    <img src="{{ block.settings.accordion_image | img_url: 'master' }}" alt="{{ block.settings.title }}" class="coverflow-image">
+                  {% endif %}
+                  <button class="coverflow-accordion-title" data-slide-index="{{ forloop.index0 }}">
+                    <span class="coverflow-title-text">{{ block.settings.title }}</span>
+                    <span class="coverflow-accordion-icon">
+                      <svg viewBox="0 0 16.933 16.933" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7" class="stroke" transform="rotate(180 8.466 8.466)" style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 1.05831; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="coverflow-content">
+                  <div class="coverflow-text" style="display: none;">{{ block.settings.content }}</div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
 
@@ -62,10 +101,297 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const bgImage = document.querySelector(".careers-bg-image");
+  const pictureSource = document.querySelector(".careers-left picture source");
+  const originalDesktopImage = bgImage ? bgImage.src : "";
+  const originalMobileImage = pictureSource ? pictureSource.srcset : "";
+  let currentlyOpenAccordion = null;
+  let hoveredAccordion = null;
+  let hoverTimeout = null;
+  let restoreTimeout = null;
+  let scrollBlockTimeout = null;
+  let isScrollBlocked = false;
+  let currentSlide = 0;
+
+  // Check if mobile device
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  // Initialize Coverflow Slider for Mobile
+  function initCoverflowSlider() {
+    if (!isMobile()) return;
+    
+    const wrapper = document.querySelector(".coverflow-wrapper");
+    const slides = document.querySelectorAll(".coverflow-slide");
+    
+    if (!wrapper || slides.length === 0) return;
+    
+    // Set initial positions
+    updateCoverflowPositions();
+    
+    // Touch/swipe handling
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    
+    let touchStartTime = 0;
+    let touchStartY = 0;
+    
+    wrapper.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      touchStartTime = Date.now();
+      isDragging = true;
+    }, { passive: true });
+    
+    wrapper.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX;
+    }, { passive: true });
+    
+    wrapper.addEventListener("touchend", (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      
+      const diff = startX - currentX;
+      const diffY = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      const touchDuration = Date.now() - touchStartTime;
+      
+      // Only slide if it's a horizontal swipe (not vertical scroll) and not a quick tap
+      if (Math.abs(diff) > 50 && diffY < 30 && touchDuration < 300) {
+        if (diff > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    });
+    
+    // Mouse drag support
+    let mouseStartX = 0;
+    let mouseCurrentX = 0;
+    let isMouseDragging = false;
+    
+    let mouseStartTime = 0;
+    
+    wrapper.addEventListener("mousedown", (e) => {
+      // Don't start drag if clicking on accordion button
+      if (e.target.closest(".coverflow-accordion-title")) {
+        return;
+      }
+      mouseStartX = e.clientX;
+      mouseStartTime = Date.now();
+      isMouseDragging = true;
+    });
+    
+    wrapper.addEventListener("mousemove", (e) => {
+      if (!isMouseDragging) return;
+      mouseCurrentX = e.clientX;
+    });
+    
+    wrapper.addEventListener("mouseup", () => {
+      if (!isMouseDragging) return;
+      isMouseDragging = false;
+      
+      const diff = mouseStartX - mouseCurrentX;
+      const mouseDuration = Date.now() - mouseStartTime;
+      
+      // Only slide if it's a drag (not a click) and significant movement
+      if (Math.abs(diff) > 50 && mouseDuration < 300) {
+        if (diff > 0) {
+          goToSlide(currentSlide + 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+    });
+    
+    wrapper.addEventListener("mouseleave", () => {
+      isMouseDragging = false;
+    });
+    
+    // Initialize mobile accordion functionality
+    initMobileAccordion();
+  }
+
+  function goToSlide(index) {
+    const slides = document.querySelectorAll(".coverflow-slide");
+    const totalSlides = slides.length;
+    if (totalSlides === 0) return;
+    
+    // Circular/infinite loop
+    if (index < 0) {
+      currentSlide = totalSlides - 1;
+    } else if (index >= totalSlides) {
+      currentSlide = 0;
+    } else {
+      currentSlide = index;
+    }
+    
+    updateCoverflowPositions();
+  }
+
+  function updateCoverflowPositions() {
+    const slides = document.querySelectorAll(".coverflow-slide");
+    const totalSlides = slides.length;
+    if (totalSlides === 0) return;
+    
+    slides.forEach((slide, index) => {
+      // Calculate offset considering circular wrapping
+      let offset = index - currentSlide;
+      
+      // Handle circular wrapping for better infinite feel
+      if (offset > totalSlides / 2) {
+        offset = offset - totalSlides;
+      } else if (offset < -totalSlides / 2) {
+        offset = offset + totalSlides;
+      }
+      
+      const absOffset = Math.abs(offset);
+      
+      // Calculate transform values for coverflow effect
+      // Increased spacing to account for rotated slides taking more horizontal space
+      let translateX = offset * 220; // Increased horizontal spacing to fill sides
+      let translateZ = -absOffset * 100; // Depth for 3D effect
+      let scale = 1 - absOffset * 0.2; // Scale down non-center slides
+      let opacity = 1 - absOffset * 0.4; // Fade non-center slides
+      
+      // Clamp values
+      scale = Math.max(0.6, scale);
+      opacity = Math.max(0.2, opacity);
+      
+      // Apply transforms with proper 3D positioning
+      slide.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) scale(${scale})`;
+      slide.style.opacity = opacity;
+      slide.style.zIndex = totalSlides - absOffset;
+      
+      // Add pointer events only to center slide
+      if (absOffset === 0) {
+        slide.style.pointerEvents = 'auto';
+      } else {
+        slide.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  // Handle mobile accordion toggle
+  function initMobileAccordion() {
+    if (!isMobile()) return;
+    
+    document.querySelectorAll(".coverflow-accordion-title").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent slider from moving
+        
+        const slideIndex = parseInt(btn.dataset.slideIndex);
+        const slide = document.querySelector(`.coverflow-slide[data-index="${slideIndex}"]`);
+        const card = slide ? slide.querySelector(".coverflow-card") : null;
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector(".coverflow-accordion-icon");
+        
+        if (!card || !content) return;
+        
+        const isCurrentlyOpen = content.style.display === "block";
+        
+        // Close all other accordions
+        document.querySelectorAll(".coverflow-text").forEach(otherContent => {
+          if (otherContent !== content) {
+            otherContent.style.display = "none";
+          }
+        });
+        
+        // Reset all icons and remove active class
+        document.querySelectorAll(".coverflow-accordion-icon").forEach(otherIcon => {
+          if (otherIcon !== icon) {
+            otherIcon.style.transform = "rotate(0deg)";
+          }
+        });
+        
+        document.querySelectorAll(".coverflow-card").forEach(otherCard => {
+          if (otherCard !== card) {
+            otherCard.classList.remove("active");
+          }
+        });
+        
+        // Toggle the clicked accordion
+        if (isCurrentlyOpen) {
+          content.style.display = "none";
+          if (icon) icon.style.transform = "rotate(0deg)";
+          card.classList.remove("active");
+        } else {
+          content.style.display = "block";
+          if (icon) icon.style.transform = "rotate(180deg)";
+          card.classList.add("active");
+        }
+      });
+    });
+  }
+
+  // Simple scroll detection - temporarily block hover during scroll
+  window.addEventListener("scroll", function() {
+    // Block hover during scroll
+    isScrollBlocked = true;
+    clearTimeout(scrollBlockTimeout);
+    
+    // Unblock after scroll stops
+    scrollBlockTimeout = setTimeout(function() {
+      isScrollBlocked = false;
+    }, 100);
+  }, { passive: true });
+
+  // Function to change image with fade effect
+  function changeImage(accordionItem) {
+    if (!bgImage) return;
+    
+    const desktopImage = accordionItem ? accordionItem.dataset.image : originalDesktopImage;
+    const mobileImage = accordionItem ? accordionItem.dataset.mobileImage : originalMobileImage;
+    
+    if (desktopImage && desktopImage.trim() !== "") {
+      // Fade out
+      bgImage.style.opacity = "0";
+      
+      setTimeout(() => {
+        bgImage.src = desktopImage;
+        // Fade in
+        bgImage.style.opacity = "1";
+      }, 150);
+    }
+    
+    if (pictureSource && mobileImage && mobileImage.trim() !== "") {
+      pictureSource.srcset = mobileImage;
+    } else if (pictureSource && (!mobileImage || mobileImage.trim() === "") && desktopImage && desktopImage.trim() !== "") {
+      // If no mobile image specified, use desktop image for mobile too
+      pictureSource.srcset = desktopImage;
+    }
+  }
+
+  // Function to restore original image
+  function restoreOriginalImage() {
+    if (!bgImage) return;
+    
+    if (currentlyOpenAccordion) {
+      // If an accordion is open, show its image
+      changeImage(currentlyOpenAccordion);
+    } else {
+      // Otherwise restore original with fade effect
+      bgImage.style.opacity = "0";
+      setTimeout(() => {
+        bgImage.src = originalDesktopImage;
+        bgImage.style.opacity = "1";
+        if (pictureSource && originalMobileImage) {
+          pictureSource.srcset = originalMobileImage;
+        }
+      }, 150);
+    }
+  }
+
+  // Handle accordion clicks (Desktop only)
   document.querySelectorAll(".accordion-title").forEach(btn => {
     btn.addEventListener("click", () => {
+      if (isMobile()) return; // Don't handle on mobile
+      
       const content = btn.nextElementSibling;
-      const span = btn.querySelector("span");
+      const icon = btn.querySelector(".accordion-icon");
       const accordionItem = btn.closest(".accordion-item");
       const isCurrentlyOpen = content.style.display === "block";
       
@@ -76,10 +402,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
       
-      // Reset all spans to +
-      document.querySelectorAll(".accordion-title span").forEach(otherSpan => {
-        if (otherSpan !== span) {
-          otherSpan.textContent = "+";
+      // Reset all icons (rotate back)
+      document.querySelectorAll(".accordion-icon").forEach(otherIcon => {
+        if (otherIcon !== icon) {
+          otherIcon.style.transform = "rotate(0deg)";
         }
       });
       
@@ -93,34 +419,96 @@ document.addEventListener("DOMContentLoaded", function () {
       // Toggle the clicked accordion
       if (isCurrentlyOpen) {
         content.style.display = "none";
-        span.textContent = "+";
+        if (icon) icon.style.transform = "rotate(0deg)";
         accordionItem.classList.remove("active");
+        currentlyOpenAccordion = null;
+        restoreOriginalImage();
       } else {
         content.style.display = "block";
-        span.textContent = "−";
+        if (icon) icon.style.transform = "rotate(180deg)";
         accordionItem.classList.add("active");
+        currentlyOpenAccordion = accordionItem;
+        changeImage(accordionItem);
       }
     });
+  });
+
+  // Handle hover events - responsive hover that works when not scrolling (Desktop only)
+  document.querySelectorAll(".accordion-item").forEach(item => {
+    const accordionImage = item.dataset.image;
+    
+    if (accordionImage && accordionImage.trim() !== "") {
+      item.addEventListener("mouseenter", () => {
+        if (isMobile()) return; // Don't handle on mobile
+        
+        // Don't change image on hover if an accordion is open
+        if (currentlyOpenAccordion) {
+          return;
+        }
+        
+        // Clear any pending timeouts
+        clearTimeout(hoverTimeout);
+        clearTimeout(restoreTimeout);
+        
+        // If scroll is blocked, wait a bit then try again
+        if (isScrollBlocked) {
+          hoverTimeout = setTimeout(() => {
+            if (!isScrollBlocked && !currentlyOpenAccordion) {
+              hoveredAccordion = item;
+              changeImage(item);
+            }
+          }, 150);
+          return;
+        }
+        
+        // Change image on hover immediately
+        hoveredAccordion = item;
+        changeImage(item);
+      });
+      
+      item.addEventListener("mouseleave", () => {
+        if (isMobile()) return; // Don't handle on mobile
+        
+        // Clear hover timeout
+        clearTimeout(hoverTimeout);
+        
+        // Only restore if no accordion is open
+        if (!currentlyOpenAccordion) {
+          hoveredAccordion = null;
+          // Small delay to prevent flickering if quickly moving between items
+          restoreTimeout = setTimeout(() => {
+            if (!hoveredAccordion && !currentlyOpenAccordion) {
+              restoreOriginalImage();
+            }
+          }, 100);
+        }
+      });
+    }
+  });
+
+  // Initialize coverflow on mobile
+  if (isMobile()) {
+    initCoverflowSlider();
+  }
+
+  // Handle window resize
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (isMobile()) {
+        initCoverflowSlider();
+        initMobileAccordion();
+      } else {
+        currentSlide = 0;
+        updateCoverflowPositions();
+      }
+    }, 250);
   });
 });
 </script>
 
 <style>
-.careers-split-section .careers-left {
-  flex-shrink: 0;
-  min-height: 600px;
-  height: auto;
-}
-.careers-split-section .careers-container {
-  align-items: flex-start;
-}
-.careers-split-section .careers-bg-image {
-  width: 100%;
-  height: 100%;
-  min-height: 600px;
-  object-fit: cover;
-  display: block;
-}
 .careers-split-section {
     background: #253e2b;
     width: 100%;
@@ -128,15 +516,35 @@ document.addEventListener("DOMContentLoaded", function () {
 .careers-split-section .careers-container {
     display: flex;
     min-height: 600px;
+    align-items: stretch; 
 }
+.careers-split-section .careers-left,
+.careers-split-section .careers-right {
+    min-height: 600px;
+}
+
+.careers-split-section .careers-right {
+    width: 50%;
+    padding: 49px 72px;
+    background: #253e2b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
 .careers-split-section .careers-left {
     position: relative;
     width: 50%;
+    flex-shrink: 0;
 }
 .careers-split-section .careers-bg-image {
     width: 100%;
     height: 100%;
+    min-height: 600px;
     object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
 }
 .careers-split-section .careers-overlay {
     position: absolute;
@@ -157,27 +565,44 @@ document.addEventListener("DOMContentLoaded", function () {
     margin-top: 10px;
     max-width: 160px;
 }
-.careers-split-section .careers-right {
-    width: 50%;
-    padding: 49px 72px;
-    background: #253e2b;
-}
 .careers-split-section .careers-accordion {
     margin-top: 19px;
+    width: 100%;
+    max-width: 100%;
 }
 .careers-split-section .accordion-title {
     width: 100%;
     background: none;
     border: none;
-    padding: 24px 0;
-    font-size: 24px;
+    padding: 15px 0;
+    font-size: 32px;
+        text-transform: uppercase;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     font-weight: 400;
     font-family: 'Roboto';
     line-height: 35.2px;
     color: #fff;
+    transition: color 0.3s ease;
+}
+.careers-split-section .accordion-item:hover .accordion-title,
+.careers-split-section .accordion-item.active .accordion-title {
+    color: #00BB33;
+}
+.careers-split-section .accordion-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+.careers-split-section .accordion-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 .careers-split-section .accordion-content {
     display: none;
@@ -187,10 +612,12 @@ document.addEventListener("DOMContentLoaded", function () {
     font-weight: 400;
 }  
 .careers-split-section .custom-right-heading{
-    font-size: 32px;
+    font-size: 13px;
     font-weight: 700;
     font-family: 'Roboto';
-    margin-bottom: 25px;
+    text-transform:uppercase;
+    width: 100%;
+    color:#ffffff;
 }
 .careers-split-section .custom-right-text{
     font-size: 16px;
@@ -198,11 +625,182 @@ document.addEventListener("DOMContentLoaded", function () {
     font-family: 'Roboto';
     max-width: 68%;
     line-height: 27px;
+    text-align: center;
 }
 .button:hover{
     color: #00BB33 !important;
 }
-@media (max-width: 767px) {
+
+@media (max-width: 768px) {
+    /* Hide desktop accordion on mobile */
+    .desktop-accordion {
+        display: none !important;
+    }
+    
+    /* Mobile Coverflow Slider Styles */
+    .mobile-coverflow-container {
+        display: block;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .coverflow-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        perspective-origin: 50% 50%;
+        overflow: hidden;
+        cursor: grab;
+        -webkit-user-select: none;
+        user-select: none;
+        margin: 0;
+        padding: 0;
+        /* Ensure slides extend to edges when rotated */
+        transform-style: preserve-3d;
+    }
+    
+    .coverflow-wrapper:active {
+        cursor: grabbing;
+    }
+    
+    .coverflow-slide {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+        transform-style: preserve-3d;
+        will-change: transform, opacity;
+        left: 50%;
+        margin-left: -150px;
+        transform-origin: center center;
+    }
+    
+    .coverflow-card {
+        display: flex;
+        flex-direction: column;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transition: height 0.3s ease;
+    }
+    
+    .coverflow-image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        background: transparent;
+    }
+    
+    .coverflow-image-wrapper::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .coverflow-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .coverflow-card:hover .coverflow-image {
+        transform: scale(1.05);
+    }
+    
+    .coverflow-content {
+        padding: 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: #fff;
+        overflow-y: auto;
+        min-height: 0;
+        background: transparent;
+    }
+    
+    .coverflow-accordion-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 16px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 400;
+        font-family: 'Roboto';
+        color: #fff;
+        transition: color 0.3s ease;
+        text-align: left;
+        z-index: 10;
+    }
+    
+    .coverflow-title-text {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        line-height: 1.3;
+        color: inherit;
+    }
+    
+    .coverflow-accordion-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        margin-left: 12px;
+    }
+    
+    .coverflow-accordion-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .coverflow-accordion-icon svg path {
+        stroke: rgb(255, 255, 255) !important;
+    }
+    
+    .coverflow-card.active .coverflow-accordion-title {
+        color: #00BB33;
+    }
+    
+    .coverflow-card.active .coverflow-accordion-icon svg path {
+        stroke: #00BB33 !important;
+    }
+    
+    .coverflow-text {
+        font-size: 13px;
+        font-weight: 400;
+        font-family: 'Roboto';
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+        padding: 16px;
+        background: rgba(37, 62, 43, 0.95);
+        transition: all 0.3s ease;
+    }
+    
     .careers-split-section .careers-container{
         display: block;
     }
@@ -211,7 +809,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     .careers-split-section .careers-right {
         width: 100%;
-        padding: 29px 20px;
+        padding:40px 0 0 0;
+        align-items: unset;
+        justify-content: unset;
     }
     .careers-split-section .custom-right-text{
         max-width: 100%;
@@ -221,11 +821,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     .careers-split-section .custom-right-heading {
         font-size: 24px;
-        margin-bottom: 10px;
+        text-align:center;
+        padding-bottom:20px;
     }
     .careers-split-section .accordion-title {
-        font-size: 18px;
+        font-size: 15px;
         padding: 10px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Hide coverflow on desktop */
+    .mobile-coverflow-container {
+        display: none !important;
+    }
+    
+    /* Show desktop accordion */
+    .desktop-accordion {
+        display: block;
     }
 }
 </style>
@@ -249,7 +862,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "name": "Accordion Item",
       "settings": [
         { "type": "text", "id": "title", "label": "Title" },
-        { "type": "textarea", "id": "content", "label": "Content" }
+        { "type": "textarea", "id": "content", "label": "Content" },
+        { "type": "image_picker", "id": "accordion_image", "label": "Accordion Image (Desktop)" },
+        { "type": "image_picker", "id": "accordion_mobile_image", "label": "Accordion Image (Mobile)" }
       ]
     }
   ],
@@ -258,3 +873,4 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 }
 {% endschema %}
+  
