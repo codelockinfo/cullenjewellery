@@ -85,14 +85,30 @@
     justify-content: center;
   }
   
+  .announcement-bar-container .flickity-viewport {
+    min-height: {{ se_stts.height }}px;
+    display: flex;
+    align-items: center;
+  }
+  
   .announcement-bar-slider {
     width: 100%;
     overflow: hidden;
   }
   
+  .announcement-bar-slider .flickity-viewport {
+    display: flex;
+    align-items: center;
+  }
+  
   .announcement-bar-item {
     text-align: center;
     padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
   
   .announcement-bar-content {
@@ -103,6 +119,8 @@
     font-size: {{ se_stts.font_size }}px;
     font-weight: {{ se_stts.font_weight }};
     line-height: 1.4;
+    width: 100%;
+    text-align: center;
   }
   
   .announcement-bar-image {
@@ -125,12 +143,23 @@
   
   .announcement-bar-text {
     flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .announcement-bar-text p {
+    margin: 0;
+    text-align: center;
   }
   
   .announcement-bar-link {
     color: {{ se_stts.text_color }};
     text-decoration: none;
     transition: opacity 0.3s ease;
+    display: inline-block;
+    text-align: center;
   }
   
   .announcement-bar-link:hover {
@@ -528,13 +557,13 @@
       {
         "type": "announcement",
         "settings": {
-          "text": "<p>Austin Coming Soon!!</p>"
+          "text": "<p>New collection available now!</p>"
         }
       },
       {
         "type": "announcement",
         "settings": {
-          "text": "<p>Why We Don’t Go On Sale</p>"
+          "text": "<p>Sign up and get 10% off your first order</p>"
         }
       }
     ]
