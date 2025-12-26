@@ -3994,7 +3994,7 @@
           "effect": "1",
           "bg_color": "#236339",
           "text_color": "#ffffff",
-          "height": 40,
+          "height": 30,
           "height_mobile": 36,
           "padding_top": 10,
           "padding_bottom": 10,
