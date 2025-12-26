@@ -5,30 +5,17 @@
     endstyle
   endcapture
   assign des_header = settings.header_design 
-  assign h_topbar = settings.h_topbar 
   assign h_transparent = settings.h_transparent
   if settings.h_banner and des_header == '7' 
     section 'header_banner' 
-  endif
-  assign check = true
-  if h_topbar and des_header == '7' 
-    section 'header_top'  
-    assign check = false 
-  endif
-  if h_topbar and des_header != '7' and h_transparent and settings.h_tr_top == false
-    section 'header_top'
-    assign check = false 
   endif
   if t_name != 'index' 
     assign h_transparent = false 
   endif
   assign h__bgimg = settings.h__bgimg  -%}
-
-  {%- section 'announcement_bar' -%}
 <header id="ntheader" class="ntheader header_{{des_header}} h_icon_{{settings.h_icon}}{% if h__bgimg != blank and des_header == '7' %} lazyload h__lz_img" data-bgset="{{ h__bgimg | img_url: '1x1' }}" data-ratio="{{h__bgimg.aspect_ratio}}" data-sizes="auto"{% else %}"{% endif %}>
 	{%- if t_name == 'index' -%}<h1 class="h2 site-header__logo dn">{{- shop.name -}}</h1>{%- endif -%}
 	<div class="ntheader_wrapper pr z_200">
-      {%- if h_topbar and check -%}{%- section 'header_top' -%}{%- endif -%}
       {%- case des_header -%}
          {%- when '3' -%}{%- section 'header_3' -%}
          {%- when '1' -%}{%- section 'header_1' -%}
