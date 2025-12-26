@@ -270,11 +270,29 @@ padding:20px 0px;
 }
 
 .reviews_carousel .flickity-prev-next-button {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  background: #0000001a !important;
+  border: none;
+  box-shadow: none;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  visibility: visible !important;
 }
+.nt_full .flickity-prev-next-button.previous{
+left:0 !important;
+}
+
+.nt_full .flickity-prev-next-button.next{
+right:0 !important;}
+
+l .btn_owl_3 .flickity-prev-next-button:before {
+      -webkit-transform: none !important;
+    transform: none !important;
+}
+.flickity-prev-next-button:before {
+  font-size:28px !important;
+  width:auto !important ;
+}
+
 
 .reviews_carousel .flickity-prev-next-button:hover {
   background: #ffffff;
