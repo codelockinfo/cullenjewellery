@@ -3808,7 +3808,7 @@
           "au_time": 0,
           "autoplay": false,
           "au_hover": true,
-          "button": false,
+          "button": true,
           "btn_vi": "1",
           "btn_owl": "1",
           "btn_color": "2",
