@@ -2834,8 +2834,9 @@
               "btn_h": 50,
               "btn_h_mb": 44,
               "txt_align": "tl",
-              "content_position_desktop": "middle_left",
-              "content_position_mobile": "middle_center"
+              "banner_align": "fl_center",
+              "cap_v_pos": 81,
+              "cap_h_pos": 30
             }
           },
           "video_jkRB4H": {
@@ -2872,8 +2873,9 @@
               "btn_h": 50,
               "btn_h_mb": 44,
               "txt_align": "tc",
-              "content_position_desktop": "middle_center",
-              "content_position_mobile": "middle_center"
+              "banner_align": "fl_center",
+              "cap_v_pos": 50,
+              "cap_h_pos": 50
             }
           }
         },
