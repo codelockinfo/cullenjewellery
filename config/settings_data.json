@@ -2997,7 +2997,7 @@
           "cap_v_pos": 47,
           "cap_h_pos": 54,
           "cap_v_pos_mb": 100,
-          "cap_h_pos_mb": 36,
+          "cap_h_pos_mb": 75,
           "txt_align": "tl",
           "use_shadow": false,
           "cl_overlay": "#000000",
