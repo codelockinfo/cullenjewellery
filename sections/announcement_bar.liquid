@@ -1,0 +1,507 @@
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign section_blocks = section.blocks
+-%}
+
+{%- if section_blocks.size > 0 -%}
+<div class="announcement-bar-wrapper nt_se_{{sid}} {{se_stts.layout}}" id="announcement-bar-{{sid}}">
+  <div class="announcement-bar-container">
+    <div class="announcement-bar-slider nt_slider js_carousel" 
+         data-flickity='{ 
+           "fade": {{se_stts.effect}}, 
+           "cellAlign": "center", 
+           "imagesLoaded": 0, 
+           "lazyLoad": 0, 
+           "freeScroll": 0, 
+           "wrapAround": {{se_stts.loop}}, 
+           "autoPlay": {% if se_stts.autoplay %}{{ se_stts.au_time | times: 1000 }}{% else %}0{% endif %}, 
+           "pauseAutoPlayOnHover": {{se_stts.au_hover}}, 
+           "rightToLeft": {{settings.use_rtl}}, 
+           "prevNextButtons": false, 
+           "pageDots": false, 
+           "contain": 1, 
+           "adaptiveHeight": 1, 
+           "dragThreshold": 5, 
+           "percentPosition": 1 
+         }'>
+      {%- for block in section_blocks -%}
+        {%- assign bk_stts = block.settings -%}
+        <div class="announcement-bar-item col-12" {{ block.shopify_attributes }}>
+          <div class="announcement-bar-content">
+            {%- if bk_stts.icon != blank -%}
+              <span class="announcement-bar-icon">{{ bk_stts.icon }}</span>
+            {%- endif -%}
+            {%- if bk_stts.text != blank -%}
+              <div class="announcement-bar-text">
+                {%- if bk_stts.link != blank -%}
+                  <a href="{{ bk_stts.link }}" class="announcement-bar-link" target="{{ bk_stts.open_link }}">
+                    {{ bk_stts.text }}
+                  </a>
+                {%- else -%}
+                  {{ bk_stts.text }}
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if se_stts.show_close -%}
+      <button type="button" class="announcement-bar-close" aria-label="Close announcement bar">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1L1 13M1 1L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- style -%}
+  .announcement-bar-wrapper {
+    position: relative;
+    z-index: 1000;
+    {%- if se_stts.show_border -%}
+    border-bottom: 1px solid {{ se_stts.border_color }};
+    {%- endif -%}
+  }
+  
+  .announcement-bar-container {
+    position: relative;
+    background-color: {{ se_stts.bg_color }};
+    color: {{ se_stts.text_color }};
+    padding: {{ se_stts.padding_top }}px 0 {{ se_stts.padding_bottom }}px;
+    min-height: {{ se_stts.height }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .announcement-bar-slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .announcement-bar-item {
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .announcement-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: {{ se_stts.font_size }}px;
+    font-weight: {{ se_stts.font_weight }};
+    line-height: 1.4;
+  }
+  
+  .announcement-bar-icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: {{ se_stts.icon_size }}px;
+  }
+  
+  .announcement-bar-text {
+    flex: 1;
+  }
+  
+  .announcement-bar-link {
+    color: {{ se_stts.text_color }};
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .announcement-bar-link:hover {
+    opacity: 0.8;
+  }
+  
+  .announcement-bar-close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: {{ se_stts.text_color }};
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .announcement-bar-close:hover {
+    opacity: 1;
+  }
+  
+  .announcement-bar-wrapper.hidden {
+    display: none;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 767px) {
+    .announcement-bar-container {
+      padding: {{ se_stts.padding_top_mobile }}px 0 {{ se_stts.padding_bottom_mobile }}px;
+      min-height: {{ se_stts.height_mobile }}px;
+    }
+    
+    .announcement-bar-content {
+      font-size: {{ se_stts.font_size_mobile }}px;
+    }
+    
+    .announcement-bar-icon {
+      font-size: {{ se_stts.icon_size_mobile }}px;
+    }
+    
+    .announcement-bar-item {
+      padding: 0 15px;
+    }
+    
+    .announcement-bar-close {
+      right: 10px;
+    }
+  }
+{%- endstyle -%}
+
+{%- if se_stts.show_close -%}
+<script>
+  (function() {
+    var announcementBar = document.getElementById('announcement-bar-{{sid}}');
+    var closeBtn = announcementBar?.querySelector('.announcement-bar-close');
+    var storageKey = 'announcement-bar-closed-{{sid}}';
+    
+    // Check if announcement bar was previously closed
+    if (localStorage.getItem(storageKey) === 'true') {
+      if (announcementBar) {
+        announcementBar.classList.add('hidden');
+      }
+      return;
+    }
+    
+    // Close button functionality
+    if (closeBtn && announcementBar) {
+      closeBtn.addEventListener('click', function() {
+        announcementBar.classList.add('hidden');
+        localStorage.setItem(storageKey, 'true');
+      });
+    }
+  })();
+</script>
+{%- endif -%}
+{%- endif -%}
+
+{%- schema -%}
+{
+  "name": "Announcement Bar",
+  "class": "announcement-bar-section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "header",
+      "content": "== Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "nt_full",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "nt_full",
+          "label": "Full Width"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "== Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Enable Loop",
+      "info": "At the end of slides, wrap-around to the other end for infinite scrolling.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "au_time",
+      "min": 1,
+      "max": 30,
+      "step": 0.5,
+      "label": "Autoplay Speed",
+      "info": "Set is '0' to disable autoplay.",
+      "unit": "sec",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "au_hover",
+      "label": "Pause Autoplay on Hover",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "effect",
+      "label": "Transition Effect",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "Fade"
+        },
+        {
+          "value": "0",
+          "label": "Slide"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "== Style Settings"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "min": 30,
+      "max": 100,
+      "step": 2,
+      "label": "Min Height (Desktop)",
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "min": 30,
+      "max": 80,
+      "step": 2,
+      "label": "Min Height (Mobile)",
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "label": "Padding Top (Desktop)",
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "label": "Padding Bottom (Desktop)",
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "label": "Padding Top (Mobile)",
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "label": "Padding Bottom (Mobile)",
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 11,
+      "max": 18,
+      "step": 0.5,
+      "label": "Font Size (Desktop)",
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 10,
+      "max": 16,
+      "step": 0.5,
+      "label": "Font Size (Mobile)",
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font Weight",
+      "default": "500",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "label": "Icon Size (Desktop)",
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "label": "Icon Size (Mobile)",
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "checkbox",
+      "id": "show_border",
+      "label": "Show Bottom Border",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "header",
+      "content": "== Close Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_close",
+      "label": "Show Close Button",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (HTML/Emoji)",
+          "info": "You can use HTML icons or emojis. Example: <i class='pegk pe-7s-bell'></i> or 🔔",
+          "default": "🔔"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Announcement Text",
+          "default": "<p>Free shipping on orders over $50!</p>"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (Optional)",
+          "info": "Make the announcement clickable"
+        },
+        {
+          "type": "select",
+          "id": "open_link",
+          "label": "Open Link In",
+          "default": "_self",
+          "options": [
+            {
+              "value": "_self",
+              "label": "Same Window"
+            },
+            {
+              "value": "_blank",
+              "label": "New Window"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement",
+        "settings": {
+          "icon": "🚚",
+          "text": "<p>Free shipping on orders over $50!</p>"
+        }
+      },
+      {
+        "type": "announcement",
+        "settings": {
+          "icon": "🎁",
+          "text": "<p>New collection available now!</p>"
+        }
+      },
+      {
+        "type": "announcement",
+        "settings": {
+          "icon": "⭐",
+          "text": "<p>Sign up and get 10% off your first order</p>"
+        }
+      }
+    ]
+  }
+}
+{%- endschema -%}
+
