@@ -252,10 +252,19 @@
     {%- comment -%} Content Position Styles {%- endcomment -%}
     {%- assign cap_h = bk_stts.cap_h_pos | default: 50 -%}
     {%- assign cap_v = bk_stts.cap_v_pos | default: 50 -%}
+    {%- assign cap_h_mb = bk_stts.cap_h_pos_mb | default: cap_h -%}
+    {%- assign cap_v_mb = bk_stts.cap_v_pos_mb | default: cap_v -%}
     .nt_se_{{sid}} .bk_{{bid}} .pa_txts {
-      left: {{cap_h}}%;
-      top: {{cap_v}}%;
-      transform: translate(-{{cap_h}}%, -{{cap_v}}%);
+      left: {{cap_h_mb}}%;
+      top: {{cap_v_mb}}%;
+      transform: translate(-{{cap_h_mb}}%, -{{cap_v_mb}}%);
+    }
+    @media (min-width: 768px) {
+      .nt_se_{{sid}} .bk_{{bid}} .pa_txts {
+        left: {{cap_h}}%;
+        top: {{cap_v}}%;
+        transform: translate(-{{cap_h}}%, -{{cap_v}}%);
+      }
     }
     
     {%- comment -%} Hide desktop image on mobile and vice versa {%- endcomment -%}
@@ -826,6 +835,26 @@
           "max": 100,
           "step": 1,
           "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_v_pos_mb",
+          "label": "Content vertical position (Mobile)",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_h_pos_mb",
+          "label": "Content horizontal position (Mobile)",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
         }
       ]
     },
@@ -1219,6 +1248,26 @@
           "type": "range",
           "id": "cap_h_pos",
           "label": "Content horizontal position",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_v_pos_mb",
+          "label": "Content vertical position (Mobile)",
+          "default": 50,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%"
+        },
+        {
+          "type": "range",
+          "id": "cap_h_pos_mb",
+          "label": "Content horizontal position (Mobile)",
           "default": 50,
           "min": 0,
           "max": 100,
