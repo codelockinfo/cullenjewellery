@@ -2996,7 +2996,7 @@
           "caption_w": "1",
           "cap_v_pos": 47,
           "cap_h_pos": 54,
-          "cap_v_pos_mb": 24,
+          "cap_v_pos_mb": 0,
           "cap_h_pos_mb": 13,
           "txt_align": "tl",
           "use_shadow": false,
