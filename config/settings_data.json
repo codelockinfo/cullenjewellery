@@ -2834,7 +2834,7 @@
               "btn_h": 50,
               "btn_h_mb": 44,
               "txt_align": "tl",
-              "content_position_desktop": "bottom_left",
+              "content_position_desktop": "middle_left",
               "content_position_mobile": "middle_center"
             }
           },
