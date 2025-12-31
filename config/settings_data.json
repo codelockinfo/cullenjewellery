@@ -77,7 +77,7 @@
     "full_header": true,
     "sticky_header": true,
     "scroll_header": false,
-    "header_design": "2",
+    "header_design": "1",
     "h_transparent": false,
     "h_tr_top": false,
     "h_navmb": 60,
@@ -4016,6 +4016,12 @@
           "show_border": false,
           "border_color": "#e5e5e5",
           "show_close": false
+        }
+      },
+      "header_1": {
+        "type": "header_1",
+        "settings": {
+          "height": 62
         }
       }
     },
